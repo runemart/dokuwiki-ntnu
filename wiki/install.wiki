@@ -12,6 +12,6 @@ Contact information in the template footer is configurable through "Template set
 You may also wish to specify:
 
   * Under which "NTNU-tab" your site is located.
-  * you want the users currently visited page to be emphasized in the menu.
+  * If you want the users currently visited page to be emphasized in the menu.
   * [breadcrumbs Custom breadcrumbs]
   * File name settings for autodetect [menus] and [sidebar sidebars].
