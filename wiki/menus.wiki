@@ -14,7 +14,7 @@ _Tip: A namespace menu might contain only whitespace, if it's only purpose is to
 
 == Menu syntax == 
 
-Menus are expected to contain *only* a level 2 heading and an unordered list of links. Anything else could/will break the layout. 
+Menus are expected to contain *only* a level 2 heading and an unordered list of links. Anything else could/will break the layout. You may define multiple menus in one menu file (heading + list + heading + list etc...)
 
 Expanding menus are created using nested levels of unordered lists, and will be expanded automatically when the page they appear beneath is active.
 
