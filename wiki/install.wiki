@@ -1,0 +1,17 @@
+= Installing the NTNU template =
+
+  # Unzip the archive to your `tpl` folder.
+  # Enter the admin userface and select "Configuration manager".
+  # Under "Basic settings", select "ntnu" as template. 
+  # Save changes
+
+== Changing template settings == 
+
+Contact information in the template footer is configurable through "Template settings". 
+
+You may also wish to specify:
+
+  * Under which "NTNU-tab" your site is located.
+  * you want the users currently visited page to be emphasized in the menu.
+  * [breadcrumbs Custom breadcrumbs]
+  * File name settings for autodetect [menus] and [sidebar sidebars].
