@@ -14,4 +14,4 @@ You may also wish to specify:
   * Under which "NTNU-tab" your site is located.
   * If you want the users currently visited page to be emphasized in the menu.
   * [breadcrumbs Custom breadcrumbs]
-  * File name settings for autodetect [menus] and [sidebar sidebars].
+  * File name settings for autodetected [menus] and [sidebar sidebars].
