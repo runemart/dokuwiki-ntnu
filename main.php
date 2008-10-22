@@ -223,7 +223,7 @@ checkTemplateUpdates();
 
 		<?php if(!$_SERVER['REDIRECT_HTTPS'] == "on") { ?>
 		<!-- webtrends logging for NTNU -->
-		<noscript><img alt="WebTrends logging" name="dcsimg" style="width: 1px; heigh: 1px" src="http://sdc.itea.ntnu.no/dcsonfmouolv6i2g5zjlqvcls_2n9k/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=8.0.1" /></noscript>
+		<noscript><img alt="WebTrends logging" name="dcsimg" style="width: 1px; height: 1px" src="http://sdc.itea.ntnu.no/dcsonfmouolv6i2g5zjlqvcls_2n9k/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=8.0.1" /></noscript>
 		<!-- end webtrends -->
 		<?php } ?>
 
