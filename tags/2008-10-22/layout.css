@@ -1,0 +1,107 @@
+
+/**
+ * Tableless Layout for NTNU template
+ *
+ * @author Andreas Gohr <andi@splitbrain.org>
+ * @author moraes <moraes@tipos.com.br>
+ * @modified-by Rune M. Andersen <rune.andersen@ime.ntnu.no>
+ */
+
+/* -------------- top row --------------- */
+
+/* ---------------	top and bottom bar ---------------- */
+div.dokuwiki .bar {
+	padding: 0.1em 0.15em;
+	clear: both;
+}
+
+div.dokuwiki .bar-left {
+	float: left;
+}
+
+div.dokuwiki .bar-right {
+	float: right;
+	text-align: right;
+}
+
+div.dokuwiki #bar__bottom {
+	margin-bottom:3px;
+}
+
+/* ------------- File Metadata ----------------------- */
+
+div.dokuwiki div.meta {
+	clear: both;
+	color: __text_alt__;
+	border-top: 1px dashed __border_dark__;
+	border-bottom: 1px solid __border_dark__;
+	width: __page_width__;
+}
+
+div.dokuwiki div.meta div.user {
+	float: left;
+	font-size: 0.9em;
+	padding: 0.1em 0.5em;
+}
+
+div.dokuwiki div.meta div.doc {
+	text-align: right;
+	font-size: 0.9em;
+	padding: 0.1em 0.5em;
+}
+
+/* ------------- Included frames ----------------------- */
+
+iframe {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	border: none;
+	border-width: 1px 0 1px 1px;
+	overflow: visible;
+	height: 52em;
+	scrolling: auto;
+}
+
+
+/* ====================================================================
+COLUMNS LAYOUT
+-------------------------------------------------------------------- */
+div.dokuwiki div.columns-float {
+	float: left;
+	width: __menu_content_width__;
+}
+
+div.dokuwiki div.column-one {
+	float: right;
+}
+
+div.dokuwiki div.column-two { 
+	float: left;
+}
+
+div.dokuwiki div.column-three {
+	float: left; 
+}
+
+div.dokuwiki div.pagewrapperwide div.columns-float {
+	width: __page_width__;
+}
+
+div.dokuwiki div.pagewrapperwide div.column-one {
+	width: __wide_content_width__;
+}
+
+
+/* Debug colors */
+
+/*
+div.dokuwiki div.columns-float {background: yellow;}
+div.dokuwiki div.page {background: lightgreen;}
+div.dokuwiki div.menu {background: lightblue;}
+div.dokuwiki div.sidebar {background: orange;}
+div.dokuwiki div.breadcrumbs {background: pink;}
+div.dokuwiki div.footer {background: PeachPuff;}
+div.dokuwiki div.meta {background: Tomato;}
+*/
+
