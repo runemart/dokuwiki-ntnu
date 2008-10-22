@@ -11,3 +11,5 @@ Sidebars may be inherited if you name the file/page `mainsidebar`. As with menus
 == Sidebar syntax == 
 
 Sidebars need no special syntax, but it you want to create an NTNU-style blue information box a special [http://www.ime.ntnu.no/dokuwiki/plugin/infoboks Infoboks plugin] exists. 
+
+The file names `sidebar` and `mainsidebar` are configurable in the "Template settings" section.
