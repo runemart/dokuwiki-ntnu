@@ -1,6 +1,6 @@
 = Installing the NTNU template =
 
-  # Unzip the archive to your `tpl` folder.
+  # Unzip the archive to your `tpl` folder (`tpl\ntnu`).
   # Enter the admin userface and select "Configuration manager".
   # Under "Basic settings", select "ntnu" as template. 
   # Save changes
