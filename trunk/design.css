@@ -503,6 +503,10 @@ div.dokuwiki ol {
 	font-weight: bold;
 }
 
+div.dokuwiki ol li {
+	margin-top: 1em;
+}
+
 /* the list items overriding the ul/ol definition */
 div.dokuwiki .li {
 	color: __text__;
