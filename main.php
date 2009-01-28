@@ -192,7 +192,7 @@ checkTemplateUpdates();
 			<div class="bar robots-noindex" id="bar__bottom">
 				<div class="bar-left" id="bar__bottomleft">
 					<?php
-						if(auth_quickaclcheck($ID) > AUTH_READ) {
+						if($_SERVER['REMOTE_USER'] || auth_quickaclcheck($ID) > AUTH_READ) {
 							tpl_button('edit');
 							tpl_button('history');
 							tpl_button('recent');
@@ -201,7 +201,7 @@ checkTemplateUpdates();
 				</div>
 				<div class="bar-right" id="bar__bottomright">
 					<?php
-						if(auth_quickaclcheck($ID) > AUTH_READ) {
+						if($_SERVER['REMOTE_USER'] || auth_quickaclcheck($ID) > AUTH_READ) {
 							tpl_button('index');
 							tpl_button('subscription');
 							tpl_button('admin');
