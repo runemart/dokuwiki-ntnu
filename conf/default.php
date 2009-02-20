@@ -19,7 +19,6 @@ $conf['email_en']										= 'XXX@XXX.ntnu.no';                    // E-mail
 // Selected tab
 $conf['selectedtab'] 									= 'om';
 $conf['selectedtab_en'] 							= 'about';
-$conf['markcurrentmenuitem']				= 1;
 $conf['customcrumb']								= '[[http://www.ntnu.no|NTNU]]';
 $conf['customcrumb_en']							= '[[http://www.ntnu.no/english|NTNU]]';
 $conf['crumbskip']										= 0;
@@ -30,6 +29,9 @@ $conf['global_menu_pagename']				= 'mainmenu'; // Name of the file that will be 
 $conf['namespace_menu_pagename']		= 'menu'; // Name of file that will be the inheritet namespace menu
 $conf['namespace_sidebar_pagename']	= 'mainsidebar'; // Name of file that will be the inherited namespace sidebar
 $conf['page_sidebar_pagename']				= 'sidebar'; // Name of the file that will be the page specific sidebar
+$conf['markcurrentmenuitem']				= 1;
+$conf['expandmenus']								= 0;
+
 
 // Update massages
 $conf['usetemplateupdates']					= 1;

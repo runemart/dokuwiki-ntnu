@@ -18,7 +18,6 @@ $lang['email_en']						= 'E-postadresse (engelsk)';
 
 $lang['selectedtab']  								= 'Under hvilken norsk arkfane er sidene plassert?';
 $lang['selectedtab_en']  							= 'Under hvilken engelsk arkfane er sidene plassert?';
-$lang['markcurrentmenuitem']					= 'Markering av aktivt menypunkt?';
 $lang['customcrumb']								= 'Egendefinert del av norsk brødsmulesti.<br /> Bruk wikilinksyntaks, og sett én link på hver linje)';
 $lang['customcrumb_en']							= 'Egendefinert del av engelsk brødsmulesti.<br /> Bruk wikilinksyntaks, og sett én link på hver linje)';
 $lang['crumbskip']										= 'Utelat X nivåer fra norsk wikibrødsmulesti?<br />(Hvis du vil skjule ett eller flere nivåer)';
@@ -28,6 +27,9 @@ $lang['global_menu_pagename']				= 'Filnavn for global hovedmeny';
 $lang['namespace_menu_pagename']		= 'Filnavn for sidespesifikk (arvende) meny';
 $lang['namespace_sidebar_pagename']	= 'Filnavn for gjennomg&aring;ende 3. spalte';
 $lang['page_sidebar_pagename']				= 'Filnavn for sidespesifikk 3. spalte';
+$lang['markcurrentmenuitem']					= 'Markering av aktivt menypunkt?';
+$lang['expandmenus']								= 'La alle menyer vises som ekspanderte?';
+
 
 $lang['selectedtab_o_start']			= 'Startside';
 $lang['selectedtab_o_studier']		= 'Studier';

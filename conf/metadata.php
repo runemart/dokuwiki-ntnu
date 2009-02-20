@@ -19,7 +19,6 @@ $meta['email_en']										= array('email');
 // Selected tab
 $meta['selectedtab']  								= array('multichoice','_choices' => array('start','studier','student','evu','forskning','non','om', 'aktuelt'));
 $meta['selectedtab_en']  							= array('multichoice','_choices' => array('home','studies','living','research','bai','about', 'contact'));
-$meta['markcurrentmenuitem']				= array('onoff');
 $meta['customcrumb']								= array('setting');
 $meta['customcrumb_en']						= array('setting');
 $meta['crumbskip']									= array('numeric');
@@ -30,6 +29,9 @@ $meta['global_menu_pagename']				= array('string');
 $meta['namespace_menu_pagename']		= array('string');
 $meta['namespace_sidebar_pagename']	= array('string');
 $meta['page_sidebar_pagename']			= array('string');
+$meta['markcurrentmenuitem']				= array('onoff');
+$meta['expandmenus']								= array('onoff');
+
 
 // Update massages
 $meta['usetemplateupdates']					= array('onoff');

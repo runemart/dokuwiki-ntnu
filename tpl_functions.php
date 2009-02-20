@@ -126,10 +126,12 @@ function p_sidebar_xhtml($Sb, $ID = NULL) {
 
 	foreach($control as $k => $c){
 		if(strpos($ID, $k) !== 0){
-			// fjerner innholdet
-			list($start, $stop) = explode("-", $c);
-			for($i=$start ; $i<=$stop ; $i++){
-				$data[$i] = "";
+			// removes sub items from menu, unless configured not to
+			if(!tpl_getConf('expandmenus')){
+				list($start, $stop) = explode("-", $c);
+				for($i=$start ; $i<=$stop ; $i++){
+					$data[$i] = "";
+				}
 			}
 		}
 	}
