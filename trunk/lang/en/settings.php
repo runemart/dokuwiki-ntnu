@@ -18,7 +18,6 @@ $lang['email_en']					= 'E-mail address (english)';
 
 $lang['selectedtab']  								= 'Under which Norwegian tab are the pages placed?';
 $lang['selectedtab_en']  							= 'Under which English tab are the pages placed?';
-$lang['markcurrentmenuitem']					= 'Mark active menu item?';
 $lang['customcrumb']								= 'Custom part of Norwegian breadcrumbs in wiki syntax (one on each line)';
 $lang['customcrumb_en']							= 'Custom part of English breadcrumbs in wiki syntax (one on each line)';
 $lang['crumbskip']										= 'Skip X levels of Norwegian wiki breadcrumbs?';
@@ -28,6 +27,8 @@ $lang['global_menu_pagename']				= 'File name of global menu';
 $lang['namespace_menu_pagename']		= 'File name of local page menu';
 $lang['namespace_sidebar_pagename']	= 'File name of 3rd column';
 $lang['page_sidebar_pagename']				= 'File name of page specific 3rd column';
+$lang['markcurrentmenuitem']					= 'Mark active menu item?';
+$lang['expandmenus']								= 'Show all menus as expanded?';
 
 $lang['selectedtab_en_o_home']			= 'Home';
 $lang['selectedtab_en_o_studies']		= 'Studies';
