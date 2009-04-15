@@ -161,7 +161,7 @@ function tpl_markCurrent($data, $id){
 		$m = array();
 		preg_match('/title="(.*?)"/', $line, $m);
 		// if correct link, and not link to anchor on page
-		if($m[1] == $id && !preg_match('/<a href(.*?)#(.*?)>/', $line)){
+		if($m[1] == $id && !preg_match('/<a href="(.*?)#(.*?)"(.*?)>/', $line)){
 			$line = preg_replace('/(<a href(.*?)>)(.*?)(<\/a>)/', '\1<em class="current">\3</em>\4', $line);
 		}
 		$ret[] = $line;
