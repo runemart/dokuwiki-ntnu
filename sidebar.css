@@ -13,3 +13,22 @@ div.sidebar hr {
 	padding: 0;
 	border-top: 1px dashed __ntnu3__;
 }
+
+/* definition lists */
+
+div.sidebar dl {
+	padding: 0;
+}
+
+div.sidebar dt {
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+div.sidebar dd {
+	margin-left: 1em;
+	padding-bottom: .3em;
+}
+
+div.sidebar dd p {
+}
