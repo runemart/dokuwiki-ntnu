@@ -2,11 +2,11 @@
 
 == Global menu == 
 
-The template looks for a file/page called `mainmenu` to in the site root (`http://<my site>/mainmenu`). If present, the file will be used as a global menu throughout the site.
+The template looks for a page called `mainmenu` to in the site root (`http://<my site>/mainmenu`). If present, the menu will be used globally throughout the site.
 
 == Namespace menus == 
 
-If present, namespace menus will appear beneath the global menu. The template expects these files/pages to called `menu` and to be placed in the namespace/folder where they are to be displayed. 
+If present, namespace menus will appear beneath the global menu. The template expects these pages to called `menu` and to be placed in the namespace/folder where they are to be displayed. 
 
 A namespace menu will be inherited until an namespace further down in the hierarchy declares a new menu. The new menu will then replace the old one in the left hand column.  
 
@@ -27,4 +27,4 @@ Expanding menus are created using nested levels of unordered lists, and will be 
 
 }}}
 
-The file names `mainmenu` and `menu` are configurable in the "Template settings" section. 
+The page names `mainmenu` and `menu` are configurable in the "Template settings" section. 
