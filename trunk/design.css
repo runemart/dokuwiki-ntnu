@@ -12,10 +12,17 @@
 * { padding: 0; margin: 0; }
 
 body {
+	margin: 1em 3px;
+}
+
+body.dwbody {
+	margin: 2em 0 0 32px;
+}
+
+body {
 	font: 75% Arial, "Lucida Grande", Verdana, Lucida, Helvetica, sans-serif;
 	background-color: __background__;
 	color: __text__;
-	margin: 2em 0 0 32px;
 }
 
 div.dokuwiki {
