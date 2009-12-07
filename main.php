@@ -86,7 +86,7 @@ checkTemplateUpdates();
 		?>
 		<!-- google analytics end -->
 	</head>
-	<body class="<?php echo $pagelang; ?>" id="pageid_<?php echo $ID; ?>" onload="onLoad();">
+	<body class="dwbody <?php echo $pagelang; ?>" id="pageid_<?php echo $ID; ?>" onload="onLoad();">
 		<!-- dokuwiki start -->
 		<div class="dokuwiki">
 			<div class="offscreen robots-noindex">
@@ -105,6 +105,8 @@ checkTemplateUpdates();
 					</div>
 				</div>
 				<!-- header end -->
+
+			<?php require_once('ie6.php'); ?>
 
 			<?php html_msgarea()?>
 
