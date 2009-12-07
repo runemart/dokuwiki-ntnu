@@ -60,6 +60,7 @@ checkTemplateUpdates();
 		<link rel="stylesheet" media="handheld" type="text/css" href="<?php echo DOKU_TPL?>handheld.css" />
 		<link rel="icon" href="<?php echo DOKU_TPL?>images/favicon.ico" type="image/ico" />
 		<link rel="shortcut icon" href="<?php echo DOKU_TPL?>images/favicon.ico" />
+		<link rel="apple-touch-icon" href="<?php echo DOKU_TPL?>images/apple-touch-icon.png" />
 		<script type="text/javascript" charset="utf-8" src="<?php echo DOKU_TPL?>searchscript.php" ></script>
 		<?php if(!$_SERVER['REDIRECT_HTTPS'] == "on") { ?>
 		<!-- webtrends logging for NTNU -->
@@ -106,7 +107,7 @@ checkTemplateUpdates();
 				</div>
 				<!-- header end -->
 
-			<?php require_once('ie6.php'); ?>
+			<?php @include_once('ie6.php'); ?>
 
 			<?php html_msgarea()?>
 
