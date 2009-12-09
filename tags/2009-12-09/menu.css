@@ -1,0 +1,176 @@
+div.dokuwiki div.menu {
+	width: __menu_width__;
+	margin-bottom: 1em;
+}
+
+div.dokuwiki div.menu div.padder {
+	padding: 0 0 0 1em;
+}
+
+div.dokuwiki div.menu div div,
+div.dokuwiki div.menu div ul li div {
+	padding: 0;
+}
+
+div.dokuwiki div.menu h1,
+div.dokuwiki div.menu h2 {
+	font-weight: bold;
+	font-size: 1em;
+	margin: 0;
+	padding: 0 0 0.5em 0;
+	text-decoration: none;
+}
+
+div.dokuwiki div.menu ul {
+	float: left;
+	padding: 0 0 0.5em 0;
+	margin: 0 0 0.5em 0;
+	list-style: none;
+	width: 100%;
+}
+
+div.dokuwiki div.menu ul li ul,
+div.dokuwiki div.menu ul li ul li ul
+{
+	float: left;
+	padding: 0 0 0 1em;
+	margin: 0 0 0 0;
+	list-style: none;
+	width: 90%;
+}
+
+
+div.dokuwiki div.menu ul li {
+	float: left;
+	width: 100%;
+	list-style: none;
+	padding: 0 0 0.1em 0;
+}
+
+
+div.dokuwiki div.menu li a,
+div.dokuwiki div.menu li a:hover,
+div.dokuwiki div.menu li a:active,
+div.dokuwiki div.menu li a.wikilink1,
+div.dokuwiki div.menu li a.wikilink1:link,
+div.dokuwiki div.menu li a.wikilink1:hover,
+div.dokuwiki div.menu li a.wikilink1:active,
+div.dokuwiki div.menu li a.wikilink1:visited,
+div.dokuwiki div.menu li a.urlextern,
+div.dokuwiki div.menu li a.urlextern:link,
+div.dokuwiki div.menu li a.urlextern:hover,
+div.dokuwiki div.menu li a.urlextern:active,
+div.dokuwiki div.menu li a.urlextern:visited,
+div.dokuwiki div.menu li a.media,
+div.dokuwiki div.menu li a.media:link,
+div.dokuwiki div.menu li a.media:hover,
+div.dokuwiki div.menu li a.media:active,
+div.dokuwiki div.menu li a.media:visited,
+div.dokuwiki div.menu li a,
+div.dokuwiki div.menu li a:link,
+div.dokuwiki div.menu li a:hover,
+div.dokuwiki div.menu li a:active,
+div.dokuwiki div.menu li a:visited
+{
+	margin: 0;
+	padding: 0 0 0 1.5em;
+	background:none;
+	border: none;
+	text-decoration: none;
+	line-height: 1.3em;
+	display: block;
+	background-image: url(images/bullet.png);
+	background-position: 0.3em 0.3em;
+	background-repeat: no-repeat;
+	color: #000;
+}
+
+div.dokuwiki div.menu li ul li a,
+div.dokuwiki div.menu li ul li a:hover,
+div.dokuwiki div.menu li ul li a:active,
+div.dokuwiki div.menu li ul li a.wikilink1,
+div.dokuwiki div.menu li ul li a.wikilink1:link,
+div.dokuwiki div.menu li ul li a.wikilink1:hover,
+div.dokuwiki div.menu li ul li a.wikilink1:active,
+div.dokuwiki div.menu li ul li a.wikilink1:visited,
+div.dokuwiki div.menu li ul li a.urlextern,
+div.dokuwiki div.menu li ul li a.urlextern:link,
+div.dokuwiki div.menu li ul li a.urlextern:hover,
+div.dokuwiki div.menu li ul li a.urlextern:active,
+div.dokuwiki div.menu li ul li a.urlextern:visited,
+div.dokuwiki div.menu li ul li a.media,
+div.dokuwiki div.menu li ul li a.media:link,
+div.dokuwiki div.menu li ul li a.media:hover,
+div.dokuwiki div.menu li ul li a.media:active,
+div.dokuwiki div.menu li ul li a.media:visited,
+div.dokuwiki div.menu li ul li a,
+div.dokuwiki div.menu li ul li a:link,
+div.dokuwiki div.menu li ul li a:hover,
+div.dokuwiki div.menu li ul li a:active,
+div.dokuwiki div.menu li ul li a:visited
+{
+	background-image: url(images/subbullet.png);
+
+}
+
+div.dokuwiki div.menu li ul li ul li a,
+div.dokuwiki div.menu li ul li ul li a:hover,
+div.dokuwiki div.menu li ul li ul li a:active,
+div.dokuwiki div.menu li ul li ul li a.wikilink1,
+div.dokuwiki div.menu li ul li ul li a.wikilink1:link,
+div.dokuwiki div.menu li ul li ul li a.wikilink1:hover,
+div.dokuwiki div.menu li ul li ul li a.wikilink1:active,
+div.dokuwiki div.menu li ul li ul li a.wikilink1:visited,
+div.dokuwiki div.menu li ul li ul li a.urlextern,
+div.dokuwiki div.menu li ul li ul li a.urlextern:link,
+div.dokuwiki div.menu li ul li ul li a.urlextern:hover,
+div.dokuwiki div.menu li ul li ul li a.urlextern:active,
+div.dokuwiki div.menu li ul li ul li a.urlextern:visited,
+div.dokuwiki div.menu li ul li ul li a.media,
+div.dokuwiki div.menu li ul li ul li a.media:link,
+div.dokuwiki div.menu li ul li ul li a.media:hover,
+div.dokuwiki div.menu li ul li ul li a.media:active,
+div.dokuwiki div.menu li ul li ul li a.media:visited,
+div.dokuwiki div.menu li ul li ul li a,
+div.dokuwiki div.menu li ul li ul li a:link,
+div.dokuwiki div.menu li ul li ul li a:hover,
+div.dokuwiki div.menu li ul li ul li a:active,
+div.dokuwiki div.menu li ul li ul li a:visited
+{
+	background-image: url(images/subbullet.png);
+}
+
+div.dokuwiki div.menu li ul li ul li a,
+div.dokuwiki div.menu li ul li ul li a:hover,
+div.dokuwiki div.menu li ul li ul li a:active,
+div.dokuwiki div.menu li ul li ul li a.wikilink1,
+div.dokuwiki div.menu li ul li ul li a.wikilink1:link,
+div.dokuwiki div.menu li ul li ul li a.wikilink1:hover,
+div.dokuwiki div.menu li ul li ul li a.wikilink1:active,
+div.dokuwiki div.menu li ul li ul li a.wikilink1:visited,
+div.dokuwiki div.menu li ul li ul li a.urlextern,
+div.dokuwiki div.menu li ul li ul li a.urlextern:link,
+div.dokuwiki div.menu li ul li ul li a.urlextern:hover,
+div.dokuwiki div.menu li ul li ul li a.urlextern:active,
+div.dokuwiki div.menu li ul li ul li a.urlextern:visited,
+div.dokuwiki div.menu li ul li ul li a.media,
+div.dokuwiki div.menu li ul li ul li a.media:link,
+div.dokuwiki div.menu li ul li ul li a.media:hover,
+div.dokuwiki div.menu li ul li ul li a.media:active,
+div.dokuwiki div.menu li ul li ul li a.media:visited,
+div.dokuwiki div.menu li ul li ul li a,
+div.dokuwiki div.menu li ul li ul li a:link,
+div.dokuwiki div.menu li ul li ul li a:hover,
+div.dokuwiki div.menu li ul li ul li a:active,
+div.dokuwiki div.menu li ul li ul li a:visited
+{
+	background-image: url(images/subsubbullet.png);
+}
+
+div.dokuwiki div.menu a em.current {
+	background: __border__;
+	border: 1px solid __border_dark__;
+	padding-right: 0.2em;
+	padding-left: 0.2em;
+	font-style: normal;
+}

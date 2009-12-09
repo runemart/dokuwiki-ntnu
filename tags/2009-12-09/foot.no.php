@@ -1,0 +1,2 @@
+<div class="contact">NTNU, 7491 Trondheim, tlf. 73 59 50 00. <a href="http://www.ntnu.no/kontakt/">Kontakt oss</a></div>
+<div class="editor">Ansvarlig redakt&oslash;r: Informasjonsdirekt&oslash;r Christian Fossen</div>
