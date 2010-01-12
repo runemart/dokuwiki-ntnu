@@ -40,17 +40,26 @@ body.en #ntnulogo {
 	background: #DCE2ED url(images/ntnulogo.en.png) no-repeat;
 }
 
+#ntnuheader.ntnu2010 #ntnulogo {
+	background: #E3E9F1 url(images/ntnulogo2010.no.png) no-repeat;
+}
+
+body.en #ntnuheader.ntnu2010 #ntnulogo {
+		background: #DCE2ED url(images/ntnulogo2010.en.png) no-repeat;
+}
+
 #ntnulenker {
-	height: 3em;
+	height: 3.2em;
 	width: __page_width__;
 	position: relative;
 	list-style: none;
+	right: 5em;
 }
 
 #ntnulenker li {
 	float: right;
 	list-style: none;
-	padding-top: .8em;
+	padding-top: .9em;
 	margin-right: 1em;
 }
 
@@ -58,6 +67,7 @@ body.en #ntnulogo {
 #ntnulenker li.opp {
 	position: relative;
 	top: -2.6em;
+	left: 6em;
 	float: left;
 	z-index: 10;
 }
@@ -155,6 +165,14 @@ body.en #ntnulogo {
 	float: right;
 	background: #DCE2ED url(images/blackpixel.png) repeat-x bottom;
 	width: __page_width__;
+}
+
+#ntnuheader.ntnu2010 #ntnumenuwrapper {
+	background: #E3E9F1 url(images/blackpixel.png) repeat-x bottom;
+}
+
+body.en #ntnuheader.ntnu2010 #ntnumenuwrapper {
+	background: #DCE2ED url(images/blackpixel.png) repeat-x bottom;
 }
 
 #ntnumenu {
