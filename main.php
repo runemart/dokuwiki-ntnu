@@ -100,7 +100,7 @@ checkTemplateUpdates();
 
 				<!-- header start -->
 				<div class="header robots-noindex">
-					<div id="ntnuheader">
+					<div id="ntnuheader" <?php echo ((date('Y') == 2010) ? 'class="ntnu2010"' : ''); ?>>
 						<?php include_once('head.'.$pagelang.'.php')?>
 						<div class="clearer"></div>
 					</div>
