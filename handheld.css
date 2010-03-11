@@ -25,7 +25,9 @@ ul {
 .meta,
 #ntnufooter,
 #quicknav_globalnav,
-#quicknav_content
+#quicknav_content,
+.printOnly
 {
 	display: none;
 }
+
