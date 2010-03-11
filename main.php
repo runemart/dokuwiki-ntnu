@@ -57,43 +57,18 @@ checkTemplateUpdates();
 		<?php @include_once('meta.'.$pagelang.'.php'); ?>
 		<!-- custom meta end -->
 		<?php tpl_metaheaders()?>
+		<!-- style and icons-->
 		<link rel="stylesheet" media="handheld" type="text/css" href="<?php echo DOKU_TPL?>handheld.css" />
 		<link rel="icon" href="<?php echo DOKU_TPL?>images/favicon.ico" type="image/ico" />
 		<link rel="shortcut icon" href="<?php echo DOKU_TPL?>images/favicon.ico" />
 		<link rel="apple-touch-icon" href="<?php echo DOKU_TPL?>images/apple-touch-icon.png" />
-		<script type="text/javascript" charset="utf-8" src="<?php echo DOKU_TPL?>searchscript.php" ></script>
-		<?php if(!$_SERVER['REDIRECT_HTTPS'] == "on") { ?>
-		<!-- webtrends logging for NTNU -->
-		<script type="text/javascript" src="http://www.ntnu.no/js/webtrends_sdc.js"></script>
-		<!-- end webtrends -->
-		<?php } ?>
-		<?php if($conf['mailguard'] == "visible") { ?>
-		<script type="text/javascript" src="<?php echo DOKU_TPL?>js/email.js"></script>
-		<?php } ?>
-		<script type="text/javascript" src="<?php echo DOKU_TPL?>js/jsUtilities.js"></script>
-		<script type="text/javascript" src="<?php echo DOKU_TPL?>js/footnoteLinks.js"></script>
-		<script type="text/javascript">
-		<!--
-			function onLoad(){
-				<?php if($conf['mailguard'] == "visible") echo "fixup();\n"; ?>
-				footnoteLinks('content', 'pagewrapper');
-			}
-		-->
-		</script>
-		<!-- google analytics start -->
-		<?php
-			if (file_exists(DOKU_PLUGIN.'googleanalytics/code.php')) include_once(DOKU_PLUGIN.'googleanalytics/code.php');
-			if (function_exists('ga_google_analytics_code')) ga_google_analytics_code();
-		?>
-		<!-- google analytics end -->
 	</head>
-	<body class="dwbody <?php echo $pagelang; ?>" id="pageid_<?php echo $ID; ?>" onload="onLoad();">
+	<body class="dwbody <?php echo $pagelang; ?>" id="pageid_<?php echo $ID; ?>">
 		<!-- dokuwiki start -->
 		<div class="dokuwiki">
 			<div class="offscreen robots-noindex">
 				<?php include_once('quicknav.'.$pagelang.'.php')?>
 			</div>
-			<?php flush()?>
 
 			<!-- pagewrapper start -->
 			<div id="pagewrapper" class="pagewrapper<?php echo (tpl_hasSidebar() && $ACT == 'show') ? " " : " pagewrapperwide";?>">
@@ -106,8 +81,6 @@ checkTemplateUpdates();
 					</div>
 				</div>
 				<!-- header end -->
-
-			<?php @include_once('ie6.php'); ?>
 
 			<?php html_msgarea()?>
 
@@ -145,21 +118,17 @@ checkTemplateUpdates();
 				</div>
 				<!-- dynamic 2/3 columns end -->
 
-				<?php flush()?>
-
 				<hr class="offscreen" />
 
-			<?php if(tpl_hasSidebar() && $ACT == 'show'){ ?>
-				<!-- sidebar start -->
-				<div class="sidebar column-three">
-					<div class="padder">
-						<?php tpl_sidebar('sidebar') ?>
+				<?php if(tpl_hasSidebar() && $ACT == 'show'){ ?>
+					<!-- sidebar start -->
+					<div class="sidebar column-three">
+						<div class="padder">
+							<?php tpl_sidebar('sidebar') ?>
+						</div>
 					</div>
-				</div>
-				<!-- sidebar end -->
-			<?php } ?>
-
-				<?php flush()?>
+					<!-- sidebar end -->
+				<?php } ?>
 
 				<hr class="offscreen" />
 
@@ -220,22 +189,36 @@ checkTemplateUpdates();
 		</div>
 		<!-- dokuwiki end -->
 
-		<!-- indexer start -->
-		<div class="no"><?php /* provide DokuWiki housekeeping, required in all templates */ tpl_indexerWebBug()?></div>
-		<!-- indexer end -->
-
-		<?php if(!$_SERVER['REDIRECT_HTTPS'] == "on") { ?>
-		<!-- webtrends logging for NTNU -->
-		<noscript><img alt="WebTrends logging" name="dcsimg" style="width: 1px; height: 1px" src="http://sdc.itea.ntnu.no/dcsonfmouolv6i2g5zjlqvcls_2n9k/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=8.0.1" /></noscript>
-		<!-- end webtrends -->
-		<?php } ?>
-
+		<!-- scripts placed at bottom of page to speed things up -->
+		<!-- google analytics start -->
+		<?php
+			if (file_exists(DOKU_PLUGIN.'googleanalytics/code.php')) include_once(DOKU_PLUGIN.'googleanalytics/code.php');
+			if (function_exists('ga_google_analytics_code')) ga_google_analytics_code();
+		?>
+		<!-- google analytics end -->
+		<?php if($conf['mailguard'] == "visible") { ?><script type="text/javascript" src="<?php echo DOKU_TPL?>js/util.js"></script><?php } ?>
+		<script type="text/javascript" src="<?php echo DOKU_TPL?>js/jsUtilities.js"></script>
+		<script type="text/javascript" src="<?php echo DOKU_TPL?>js/footnoteLinks.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 		<script type="text/javascript">
-			<!--
-				// Set dynamic gray color if JS enabled. Others will have standard black.
-				// When entering search phrase the text turns black again.
-				searchFieldInit(document.getElementById('query'));
-			-->
+			// DokuWiki already use the $()-shortname, doing it this way prevents name conflicts
+			jQuery.noConflict();
+			// Ready-function loads when document is fully loaded
+			jQuery(document).ready(
+				function(){
+					// Prepare search field to auto update text and color
+					prepareSearchField();
+
+					// Include e-mail deobfuscation script if necessary
+					<?php echo ($conf['mailguard'] == 'visible') ? 'deObfuscateEmails();' : '';  ?>
+
+					// Add link footnotes
+					footnoteLinks('content', 'pagewrapper');
+
+					// Trigger indexer
+					jQuery.get('<?= $conf['basedir'].'lib/exe/indexer.php?id='.$ID.'&'.time() ?>');
+
+			});
 		</script>
 	</body>
 </html>

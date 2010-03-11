@@ -18,7 +18,7 @@
 				<legend><span class="offscreen">Søk i NTNUs nettsider</span></legend>
 				<label for="query">
 					<span class="offscreen">Søk etter:</span>
-					<input id="query" size="12" type="text" name="s.sm.query" value="Søk her..." onfocus="searchFieldUpdate(this, '<?php echo $pagelang; ?>')" onblur="searchFieldUpdate(this, '<?php echo $pagelang; ?>')" accesskey="2" title="Søk" />
+					<input id="query" size="12" type="text" name="s.sm.query" value="Søk her..." accesskey="2" title="Søk" />
 				</label>
 				<label for="sok">
 					<input type="submit" id="sok" value="Søk" />
