@@ -223,7 +223,7 @@ function tpl_mypageinfo(){
 	global $auth;
 
 	// prepare date
-	$date = strftime($conf['dformat'],$INFO['lastmod']);
+	$date = dformat($INFO['lastmod']);
 
 	// prepare user info
 	$user = $auth->getUserData($INFO['editor']);
