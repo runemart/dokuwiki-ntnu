@@ -53,6 +53,11 @@ checkTemplateUpdates();
 	<head profile="http://example.org/xmdp/robots-profile#">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title><?php tpl_pagetitle()?> - <?php echo strip_tags($conf['title'])?></title>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			// DokuWiki already use the $()-shortname, doing it this way prevents name conflicts
+			jQuery.noConflict();
+		</script>
 		<!-- custom meta start -->
 		<?php @include_once('meta.'.$pagelang.'.php'); ?>
 		<!-- custom meta end -->
@@ -196,16 +201,10 @@ checkTemplateUpdates();
 			if (function_exists('ga_google_analytics_code')) ga_google_analytics_code();
 		?>
 		<!-- google analytics end -->
-		<?php if($conf['mailguard'] == "visible") { ?><script type="text/javascript" src="<?php echo DOKU_TPL?>js/util.js"></script><?php } ?>
-		<script type="text/javascript" src="<?php echo DOKU_TPL?>js/jsUtilities.js"></script>
-		<script type="text/javascript" src="<?php echo DOKU_TPL?>js/footnoteLinks.js"></script>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script type="text/javascript" src="<?php echo DOKU_TPL?>js/util.js"></script>
 		<script type="text/javascript">
-			// DokuWiki already use the $()-shortname, doing it this way prevents name conflicts
-			jQuery.noConflict();
 			// Ready-function loads when document is fully loaded
-			jQuery(document).ready(
-				function(){
+			jQuery(document).ready(function(){
 					// Prepare search field to auto update text and color
 					prepareSearchField();
 
@@ -213,10 +212,10 @@ checkTemplateUpdates();
 					<?php echo ($conf['mailguard'] == 'visible') ? 'deObfuscateEmails();' : '';  ?>
 
 					// Add link footnotes
-					footnoteLinks('content', 'pagewrapper');
+					// TODO: make jQuery script
 
 					// Trigger indexer
-					jQuery.get('<?= $conf['basedir'].'lib/exe/indexer.php?id='.$ID.'&'.time() ?>');
+					jQuery.get('<?= $conf['basedir'].'lib/exe/indexer.php?id='.$ID.'&amp;'.time() ?>');
 
 			});
 		</script>
