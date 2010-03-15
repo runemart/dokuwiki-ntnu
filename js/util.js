@@ -18,7 +18,7 @@ function deObfuscateEmail(a){
 }
 
 function deObfuscateEmails(){
-	var links = jQuery('.columns-float a');
+	var links = jQuery("a");
 	for(var i=0; i<links.length; i++)
 		deObfuscateEmail(links[i]); 
 }
