@@ -1,0 +1,275 @@
+@media handheld {
+	#quicknav {
+		padding: 0 0 0.5em 0;
+		margin: 0;
+		width: 100%;
+	}
+
+	#quicknav li {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
+
+	#ntnuheader,
+	#footer,
+	#meta,
+	#ntnufooter,
+	#quicknav_globalnav,
+	#quicknav_content,
+	.printOnly {
+		display: none;
+	}
+}
+
+@media print {
+	body {
+	  font: 10pt Arial, Verdana, Helvetica, sans-serif;
+	  background-color: White;
+	  color: Black;
+	}
+
+	table {
+	  font-size: 100%;
+	  padding:0;
+	  margin:0;
+	}
+
+	tr,td,th {padding:0; margin:0;}
+
+	img {border:0}
+
+	a {
+	  color:#000000;
+	  background: none !important;
+	}
+
+	#meta {
+	  clear:both;
+	  margin-top: 1em;
+	  font-size:70%;
+	  text-align:right;
+	}
+
+	#breadcrumbs {
+	  display:none;
+	}
+
+	div.secedit{
+	  display:none;
+	}
+
+	/* --------------------- Text formating -------------------------------- */
+
+	/* print links */
+
+	a.interwiki:after,
+	a.mail:after,
+	a.urlextern:after
+	{
+	   content: " (" attr(href) ")";
+	   font-size: 90%;
+	}
+
+	/* hide print links if JS library is in place*/
+	html.noted a.interwiki:after,
+	html.noted a.mail:after,
+	html.noted a.urlextern:after
+	{
+		content: "";
+	}
+
+	/* the document */
+	div.page {
+
+	}
+
+	/* general headline setup */
+	h1, h2, h3, h4, h5 {
+		color: Black;
+		background-color: transparent;
+		font-size: 100%;
+		font-weight: normal;
+		margin-left:    0;
+		margin-right:   0;
+		margin-top:     0;
+		margin-bottom:  1em;
+		padding-left:   0;
+		padding-right:  0;
+		padding-top:    0.5em;
+		padding-bottom: 0;
+		border-bottom: 1px solid #000000;
+		clear:left;
+	}
+
+	/* special headlines */
+	h1 {font-size: 160%; font-weight: bold;}
+	h2 {font-size: 150%; }
+	h3 {font-size: 140%; border-bottom: none; }
+	h4 {font-size: 120%; border-bottom: none; }
+	h5 {font-size: 100%; border-bottom: none; }
+
+	/* embedded images */
+	img.media {
+	  margin: 3px;
+	}
+
+	img.medialeft {
+	  border: 0;
+	  float: left;
+	  margin: 0 1.5em 0 0;
+	}
+
+	img.mediaright {
+	  border: 0;
+	  float: right;
+	  margin: 0 0 0 1.5em;
+	}
+
+	/* unordered lists */
+	ul {
+		list-style-type: square;
+		margin: 0 0 0.5em 1.5em;
+		padding: 0;
+
+	}
+
+	/* ordered lists */
+	ol {
+		margin: 0 0 0.5em 2.5em;
+		padding: 0;
+		font-weight: normal;
+	}
+	ol ol {
+		margin: 0 0 0.5em 1.5em;
+	}
+
+	div.dokuwiki ol {list-style-type: decimal}
+	div.dokuwiki ol ol {list-style-type: upper-roman}
+	div.dokuwiki ol ol ol {list-style-type: lower-alpha}
+	div.dokuwiki ol ol ol ol {list-style-type: lower-greek}
+
+	/* the list items overriding the ol definition */
+	span.li {
+		font-weight: normal;
+	}
+
+	/* code blocks by indention */
+	pre.pre {
+	  font-size: 8pt;
+	  padding: 0.5em;
+	  border: 1px dashed #000000;
+	  color: Black;
+	  overflow: visible;
+	}
+
+	/* code blocks by code tag */
+	pre.code {
+	  font-size: 8pt;
+	  padding: 0.5em;
+	  border: 1px dashed #000000;
+	  color: Black;
+	  overflow: visible;
+	}
+
+	/* inline code words */
+	code {
+	  font-size: 120%;
+	}
+
+	/* code blocks by file tag */
+	pre.file {
+	  font-size: 8pt;
+	  padding: 0.5em;
+	  border: 1px dotted #000000;
+	  color: Black;
+	  overflow: visible;
+	}
+
+	/* footnotes */
+	div.footnotes{
+	  clear:both;
+	  border-top: 1px solid #000000;
+	  padding-left: 1em;
+	  margin-top: 1em;
+	}
+
+	div.fn{
+	  font-size:90%;
+	}
+
+	a.fn_top{
+	  vertical-align:super;
+	  font-size:80%;
+	}
+
+	a.fn_bot{
+	  vertical-align:super;
+	  font-size:80%;
+	  font-weight:bold;
+	}
+
+	acronym{
+	  border: 0;
+	}
+
+	/* ---------- inline tables ------------------- */
+
+	table.inline {
+	  font-size: 80%;
+	  background-color: #ffffff;
+	  border-spacing: 0px;
+	  border-collapse: collapse;
+	}
+
+	table.inline th {
+	  padding: 3px;
+	  border: 1px solid #666;
+	  border-bottom: 2px solid #000;
+	}
+
+	table.inline td {
+	  padding: 3px;
+	  border: 1px solid #666;
+	}
+
+	.leftalign{
+	  text-align: left;
+	}
+
+	.centeralign{
+	  text-align: center;
+	}
+
+	.rightalign{
+	  text-align: right;
+	}
+
+	.toc, .footer, #ntnumenuwrapper, #ntnuh1, #searchform, #ntnulenker, .bar, .user {display:none}
+
+	#sidebar,
+	#quicknav,
+	.menu,
+	.offscreen,
+	#ntnufooter,
+	#meta
+	{display:none}
+
+
+	.newPage {
+		page-break-before: always;
+	}
+
+	#ntnulogo {
+		background: url(images/ntnulogo.print.no.png) 100% 50% no-repeat;
+		height: 70px;
+		margin: 0;
+	}
+
+	body.en #ntnulogo {
+		background: url(images/ntnulogo.print.en.png) 100% 50% no-repeat;
+		height: 90px;
+	}
+
+}
+
