@@ -1,91 +1,59 @@
-#ntnuheader {
-	width: __page_width__;
-	position: relative;
+/* Top bar (bluebar which really is black) */
+
+#bluebarwrap {
+	padding-bottom: .4em;
+	width: 100%;
+	min-width: __body_width__;
+	overflow: hidden;
 }
 
-#ntnuheader * {
-	padding: 0;
+#bluebar {
+	background-color: #000;
+	-moz-box-shadow: 0 0 .5em -.1em #000;
+	border-top: 4px solid __ntnublue__;
+}
+
+#bluebar #bluebarinner {
+	margin: 0 auto;
+	width: __page_width__;
+	padding: .4em 0;
+}
+
+#bluebar h1 {
+	margin: 0;
+	float: left;
+	font-variant: small-caps;
+	font-size: 1.2em;
+	line-height: 1.1;
+	letter-spacing: 1px;
+}
+
+#bluebar ul {
+	float: right;
 	margin: 0;
 }
 
-#ntnuh1 {
-	width: 100%;
-}
-
-#ntnuh1 a {
-	position: absolute;
-	width: 15em;
-	height: 3.3em;
-	z-index: 10;
-}
-
-#ntnuh1 span {
-	font-size: 0.585em;
-	position: absolute;
-	width: __page_width__;
-	top: -1.5em;
-	color: #999;
-	font-variant: small-caps;
-	letter-spacing: 1px;
-	text-align: right;
-}
-
-#ntnulogo {
+#bluebar li {
 	float: left;
-	background: #DCE2ED url(images/ntnulogo.no.png) no-repeat;
-	width: __page_width__;
+	margin: 0 .9em;
+	padding: 0 .3em;
+	color: __ntnublue__;
 }
 
-body.en #ntnulogo {
-	background: #DCE2ED url(images/ntnulogo.en.png) no-repeat;
-}
-
-#ntnuheader.ntnu2010 #ntnulogo {
-	background: #DCE2ED url(images/ntnulogo2010.no.png) no-repeat;
-}
-
-body.en #ntnuheader.ntnu2010 #ntnulogo {
-		background: #DCE2ED url(images/ntnulogo2010.en.png) no-repeat;
-}
-
-#ntnulenker {
-	height: 3.2em;
-	width: __page_width__;
-	position: relative;
-	list-style: none;
-	right: 5em;
-}
-
-#ntnulenker li {
-	float: right;
-	list-style: none;
-	padding-top: .9em;
-	margin-right: 1em;
-}
-
-/* flytter over kanten og til venstre */
-#ntnulenker li.opp {
-	position: relative;
-	top: -2.6em;
-	left: 6em;
-	float: left;
-	z-index: 10;
-}
-
-#ntnulogo a,
-#ntnulogo a:link,
-#ntnulogo a:hover,
-#ntnulogo a:visited,
-#ntnulogo a:active,
-#ntnumenu li a,
-#ntnumenu li a:link,
-#ntnumenu li a:hover,
-#ntnumenu li a:visited,
-#ntnumenu li a:active
-{
-	color: #000;
+#bluebar a {
 	text-decoration: none;
+	color: white !important;
 }
+
+#bluebar li:first-child {
+	list-style: none;
+}
+
+#bluebar li:last-child {
+	padding-right: .2em;
+	margin-right: 0;
+}
+
 
 /* Trick to hide the selector for browsers not understanding > */
 
@@ -103,16 +71,19 @@ body.en #ntnuheader.ntnu2010 #ntnulogo {
 
 /* end trick */
 
-#ntnulenker #languageselector {
-	margin: 0;
+#languageselector {
+	position: absolute;
+	width: auto;
 }
 
 #languageselector>span {
 	color: __text__;
-	padding: .15em 1.3em .15em .5em;
+	padding: .2em 1.3em .2em .5em;
 	border: 1px solid __border_dark__;
-	background: url(images/droparrow-soft.gif) 100% 50% no-repeat;
+	background: #fff url(images/droparrow-soft.gif) 100% 50% no-repeat;
 	cursor: pointer;
+	display: block;
+	width: 8em;
 }
 
 #languageselector:hover>span {
@@ -121,12 +92,13 @@ body.en #ntnuheader.ntnu2010 #ntnulogo {
 }
 
 #languageselector ul {
-	height: auto;
-	width: 15em;
+	background-color: #fff;
 	border: 1px solid #000;
-	background: #fff;
-	position: absolute;
+	position: relative;
+	top: -1px;
 	display: none;
+	list-style: none;
+	margin: 0;
 }
 
 #languageselector:hover> ul {
@@ -135,10 +107,7 @@ body.en #ntnuheader.ntnu2010 #ntnulogo {
 
 #languageselector ul li {
 	padding: 0;
-	float: left;
-	clear: left;
-	width: 15em;
-	background-color: #fff;
+	display: block;
 	z-index: 500;
 }
 
@@ -147,9 +116,9 @@ body.en #ntnuheader.ntnu2010 #ntnulogo {
 }
 
 #languageselector ul li a {
-	padding: .15em .5em;
-	float: left;
-	clear: left;
+	padding: .2em .5em;
+	display: block;
+	text-decoration: none;
 }
 
 #languageselector ul li:hover a {
@@ -160,24 +129,39 @@ body.en #ntnuheader.ntnu2010 #ntnulogo {
 	border-top: 1px solid #000;
 }
 
+/* Main tab menu */
 
-#ntnumenuwrapper {
-	float: right;
-	background: #DCE2ED url(images/blackpixel.png) repeat-x bottom;
+#ntnumenuwrap {
 	width: __page_width__;
+	margin: 0 auto;
+	margin-top: 9em;
+	border-style: solid;
+	border-color: #999;
+	border-width: 1px 1px 0 1px;
+	-moz-box-shadow: 0 .25em .5em -.15em #999;
+	background: #ccc url(images/menu-gradient.png) 0 0 repeat-x;
+	text-align: center;
 }
 
 #ntnumenu {
-	float: right;
-	border-top: 1px solid #000;
+	margin: 0;
+	width: 100%;
 	list-style: none;
+	background: url(images/blueline.png) 0 100% repeat-x;
+	display: table;
 }
 
 #ntnumenu li {
-	float: left;
-	border-left: 1px solid #000;
-	padding: 0.1em 1em 0.2em 1em;
+	padding-bottom: 1px;
+	display: table-cell;
+}
+
+#ntnumenu li a {
+	padding: .4em 1em;
+	text-decoration: none;
+	font-weight: bold;
 	display: block;
+	border-right: 1px solid #999;
 }
 
 /* The selected tab of the NTNU menu */
@@ -196,70 +180,134 @@ body.en #ntnuheader.ntnu2010 #ntnulogo {
 #ntnumenu.selectedtab_bai 	li#tab_bai,
 #ntnumenu.selectedtab_about 	li#tab_about,
 #ntnumenu.selectedtab_contact 	li#tab_contact{
-	background: #fff
+	margin-left: -1px;
+	border-style: solid;
+	margin-top: -4px;
+	border-width: 4px 1px 0 1px;
+	border-color: __ntnublue__;
+	display: block;
 }
 
+#ntnumenu.selectedtab_start 	li#tab_start a,
+#ntnumenu.selectedtab_studier 	li#tab_studier a,
+#ntnumenu.selectedtab_student 	li#tab_student a,
+#ntnumenu.selectedtab_evu 	li#tab_evu a,
+#ntnumenu.selectedtab_forskning li#tab_forskning a,
+#ntnumenu.selectedtab_non 	li#tab_non a,
+#ntnumenu.selectedtab_om 	li#tab_om a,
+#ntnumenu.selectedtab_aktuelt 	li#tab_aktuelt a,
+#ntnumenu.selectedtab_home 	li#tab_home a,
+#ntnumenu.selectedtab_studies 	li#tab_studies a,
+#ntnumenu.selectedtab_living 	li#tab_living a,
+#ntnumenu.selectedtab_research 	li#tab_research a,
+#ntnumenu.selectedtab_bai 	li#tab_bai a,
+#ntnumenu.selectedtab_about 	li#tab_about a,
+#ntnumenu.selectedtab_contact 	li#tab_contact a {
+	color: #000;
+	background: white;
+	border: 0;
+	padding-bottom: .6em;
+	margin-bottom: -.2em;
+}
 
 #searchform {
-	border-top: 1px solid #000;
-	border-left: 1px solid #000;
-	float: right;
-	width: 24em;
-	background: __background_alt__;
-	padding: 0.5em;
+	position: relative;
+	top: -.4em;
+	padding: 0;
 }
 
 #searchform form {
-	width: 100%;
+	width: __page_width__;
+	margin: 0 auto;
+	display: block;
+	position: relative;
 }
 
 #searchform fieldset {
-	padding: 0;
-	text-align: left;
+	vertical-align: top;
+	background: black;
+	border: none;
+	float: right;
+	width: auto;
+	-moz-border-radius: 0 0 .5em .5em;
+	-moz-box-shadow: 0 0 .5em -.1em #000;
+	padding: 0 1.2em 1.2em;
+	margin-right: -1.2em;
 }
 
 /* størrelser på skjemaelementer er noe prakk. noen bedre forslag? */
 
 #searchform #sok,
-#searchform #query
-{
-	vertical-align: middle;
+#searchform #query {
 	font-family: Arial;
-	font-size: 0.9em;
-	margin: 0 0.5em 0 0;
-	border: 1px solid black;
 	padding: 1px 2px;
+	border: 1px solid __border_dark__;
 }
 
 #searchform #query {
-	width: 18em;
+	width: 21.5em;
+	padding: 3px;
 }
 
-#searchform #sok {
-	width: 4em;
+
+
+#address {
+	text-align: center;
+	color: __text_alt__;
+	padding: .75em 0;
 }
 
 #ntnufooter {
 	width: __page_width__;
+	margin: 0 auto;
+	background: url(images/footer_logo.png) 1.5em 2em no-repeat;
+	padding-top: 1.5em;
+}
+
+#ntnufooter ul {
+	float: left;
+	width: auto;
+	clear: none;
+	list-style: none;
+	margin: 0 0 0 6em;
+}
+
+#ntnufooter ul li {
+	line-height: 2;
+	color: __text_alt__;
+	padding-left: 20px;
+	background-repeat: no-repeat;
+	background-position: 0 50%;
+}
+
+#ntnufooter ul:first-child {
+	margin-left: 20em;
 }
 
 #ntnufooter a {
-	text-decoration: underline;
+	text-decoration: none;
 }
 
-#ntnufooter .contact,
-#ntnufooter .editor
-{
-	width: 49%;
-	float: left;
-	margin-bottom: 1em;
-	font-size: 0.9em;
-}
 
-#ntnufooter .editor {
-	float: right;
-	text-align: right;
-}
+#ntnufooter li.kart {background-image: url(icons/map.png)}
+#ntnufooter li.emner {background-image: url(icons/books.png)}
+#ntnufooter li.ledelsen {background-image: url(icons/building.png)}
+#ntnufooter li.personsok {background-image: url(icons/cards-address.png)}
+#ntnufooter li.nettstedkart {background-image: url(icons/sitemap.png)}
+#ntnufooter li.forskning {background-image: url(icons/flask.png)}
+#ntnufooter li.enheter {background-image: url(icons/home.png)}
+#ntnufooter li.redaktor {background-image: url(icons/stamp.png)}
+#ntnufooter li.kontakt {background-image: url(icons/address-book.png)}
+#ntnufooter li.fakulteter {background-image: url(icons/bank.png)}
+#ntnufooter li.adm {background-image: url(icons/building-low.png)}
+#ntnufooter li.studier {background-image: url(icons/document--pencil.png)}
+#ntnufooter li.sentralbord {background-image: url(icons/telephone.png)}
+#ntnufooter li.orgnr {background-image: url(icons/counter.png)}
+#ntnufooter li.rss {background-image: url(icons/feed.png)}
+#ntnufooter li.blog {background-image: url(icons/balloon.png)}
+#ntnufooter li.twitter {background-image: url(icons/balloon-twitter.png)}
+
+
 
 /* General NTNU and Innsida color classes */
 
@@ -269,3 +317,46 @@ body.en #ntnuheader.ntnu2010 #ntnulogo {
 .innsida1 {background-color: __innsida1__;}
 .innsida2 {background-color: __innsida2__;}
 .innsida3 {background-color: __innsida3__;}
+
+/* Utilities */
+
+.printOnly,
+.hidden {
+	display: none;
+}
+
+.offscreen {
+	position: absolute;
+	height: 1px;
+	width: 1px;
+	left: -10000em;
+	top: auto;
+	overflow: hidden;
+}
+
+.clearer {
+	clear: both;
+	height: 0;
+	width: 100%;
+	border: none;
+	font-size: 1px;
+	line-height: 0;
+}
+
+#bluebar a:focus,
+#ntnumenu li a:focus,
+#breadcrumbs a:focus,
+#menu a:focus,
+#ntnufooter a:focus {
+	text-decoration: underline !important;
+	outline: none;
+}
+
+#bluebar a:hover, #bluebar a:active,
+#ntnumenu li a:hover, #ntnumenu li a:active,
+#breadcrumbs a:hover, #breadcrumbs a:active,
+#menu a:hover, #menu a:active,
+#ntnufooter a:hover, #ntnufooter a:active {
+	text-decoration: none !important;
+	outline: none;
+}
