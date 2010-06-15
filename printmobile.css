@@ -217,7 +217,7 @@
 
 	table.inline {
 	  font-size: 80%;
-	  background-color: #ffffff;
+	  background-color: __background__;
 	  border-spacing: 0px;
 	  border-collapse: collapse;
 	}
