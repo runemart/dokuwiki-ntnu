@@ -12,3 +12,7 @@
 	*padding-left: 1.5em;
 	*padding-right: 1.5em;
 }
+
+#bluebar h1 a {
+	*background-image: url(not-really-an-image.gif);
+}

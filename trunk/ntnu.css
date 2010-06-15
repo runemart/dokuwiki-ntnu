@@ -20,12 +20,19 @@
 }
 
 #bluebar h1 {
-	margin: 0;
 	float: left;
-	font-variant: small-caps;
+	margin: 0;
 	font-size: 1.2em;
 	line-height: 1.1;
 	letter-spacing: 1px;
+	font-variant: small-caps;
+	color: white;
+}
+
+#bluebar h1 a {
+	display: block;
+	position: absolute;
+	height: 9em;
 }
 
 #bluebar ul {
@@ -53,7 +60,6 @@
 	padding-right: .2em;
 	margin-right: 0;
 }
-
 
 /* Trick to hide the selector for browsers not understanding > */
 
