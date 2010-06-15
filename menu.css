@@ -24,7 +24,7 @@
 }
 
 #menu li a {
-	color: #000;
+	color: __text__;
 	text-decoration: none;
 	display: block;
 	background: url(images/bullet.png) .3em 50% no-repeat;

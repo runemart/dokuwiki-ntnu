@@ -8,8 +8,8 @@
 }
 
 #bluebar {
-	background-color: #000;
-	-moz-box-shadow: 0 0 .5em -.1em #000;
+	background-color: __text__;
+	-moz-box-shadow: 0 0 .5em -.1em __text__;
 	border-top: 4px solid __ntnublue__;
 }
 
@@ -92,13 +92,13 @@
 }
 
 #languageselector:hover>span {
-	border: 1px solid #000;
+	border: 1px solid __text__;
 	background-image: url(images/droparrow.gif);
 }
 
 #languageselector ul {
 	background-color: __background__;
-	border: 1px solid #000;
+	border: 1px solid __text__;
 	position: relative;
 	top: -1px;
 	display: none;
@@ -131,7 +131,7 @@
 }
 
 #languageselector ul li.current {
-	border-top: 1px solid #000;
+	border-top: 1px solid __text__;
 }
 
 /* Main tab menu */
@@ -208,7 +208,7 @@
 #ntnumenu.selectedtab_bai 			li#tab_bai a,
 #ntnumenu.selectedtab_about 		li#tab_about a,
 #ntnumenu.selectedtab_contact 	li#tab_contact a {
-	color: #000;
+	color: __text__;
 	background: __background__;
 	border: 0;
 	padding-bottom: .6em;
@@ -239,7 +239,7 @@
 	float: right;
 	width: auto;
 	-moz-border-radius: 0 0 .5em .5em;
-	-moz-box-shadow: 0 0 .5em -.1em #000;
+	-moz-box-shadow: 0 0 .5em -.1em __text__;
 	padding: 0 1.2em 1.2em;
 	margin-right: -1.2em;
 }
