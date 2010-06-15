@@ -77,7 +77,7 @@ checkTemplateUpdates();
 				<!-- breadcrumbs start -->
 				<div id="breadcrumbs">
 					<div>
-						<?php echo $lang['youarehere']; ?>: <?php ob_start("tpl_myyouarehere");tpl_youarehere();ob_end_flush();	?>
+						<?php ob_start("tpl_myyouarehere");tpl_youarehere();ob_end_flush();	?>
 					</div>
 				</div>
 				<!-- breadcrumbs end -->
