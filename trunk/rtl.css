@@ -23,11 +23,11 @@ label.simple {
   text-align: right;
 }
 
-div.meta div.user {
+#meta div.user {
   float: right
 }
 
-div.meta div.doc {
+#meta div.doc {
   text-align: left;
 }
 
