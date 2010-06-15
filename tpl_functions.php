@@ -291,7 +291,7 @@ function tpl_myyouarehere($buffer){
 	if(!$skip)
 		$customcrumb .= ' &raquo; ';
 
-	return $lang['youarehere'].': '.substr($customcrumb.$breadcrumb, 9).' '; // adds space to force non-empty string
+	return substr($customcrumb.$breadcrumb, 9).' '; // adds space to force non-empty string
 }
 
 /**
