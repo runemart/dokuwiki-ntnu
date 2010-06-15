@@ -26,7 +26,6 @@
 	line-height: 1.1;
 	letter-spacing: 1px;
 	font-variant: small-caps;
-	color: white;
 }
 
 #bluebar h1 a {
@@ -49,7 +48,7 @@
 
 #bluebar a {
 	text-decoration: none;
-	color: white !important;
+	color: __background__ !important;
 }
 
 #bluebar li:first-child {
@@ -86,7 +85,7 @@
 	color: __text__;
 	padding: .2em 1.3em .2em .5em;
 	border: 1px solid __border_dark__;
-	background: #fff url(images/droparrow-soft.gif) 100% 50% no-repeat;
+	background: __background__ url(images/droparrow-soft.gif) 100% 50% no-repeat;
 	cursor: pointer;
 	display: block;
 	width: 8em;
@@ -98,7 +97,7 @@
 }
 
 #languageselector ul {
-	background-color: #fff;
+	background-color: __background__;
 	border: 1px solid #000;
 	position: relative;
 	top: -1px;
@@ -128,7 +127,7 @@
 }
 
 #languageselector ul li:hover a {
-	color: #fff;
+	color: __background__;
 }
 
 #languageselector ul li.current {
@@ -142,10 +141,10 @@
 	margin: 0 auto;
 	margin-top: 9em;
 	border-style: solid;
-	border-color: #999;
+	border-color: __border_dark__;
 	border-width: 1px 1px 0 1px;
-	-moz-box-shadow: 0 .25em .5em -.15em #999;
-	background: #ccc url(images/menu-gradient.png) 0 0 repeat-x;
+	-moz-box-shadow: 0 .25em .5em -.15em __border_dark__;
+	background: __border_light__ url(images/menu-gradient.png) 0 0 repeat-x;
 	text-align: center;
 }
 
@@ -167,24 +166,24 @@
 	text-decoration: none;
 	font-weight: bold;
 	display: block;
-	border-right: 1px solid #999;
+	border-right: 1px solid __border_dark__;
 }
 
 /* The selected tab of the NTNU menu */
-#ntnumenu.selectedtab_start 	li#tab_start,
-#ntnumenu.selectedtab_studier 	li#tab_studier,
+#ntnumenu.selectedtab_start 		li#tab_start,
+#ntnumenu.selectedtab_studier	 	li#tab_studier,
 #ntnumenu.selectedtab_student 	li#tab_student,
-#ntnumenu.selectedtab_evu 	li#tab_evu,
-#ntnumenu.selectedtab_forskning li#tab_forskning,
-#ntnumenu.selectedtab_non 	li#tab_non,
-#ntnumenu.selectedtab_om 	li#tab_om,
-#ntnumenu.selectedtab_aktuelt 	li#tab_aktuelt,
-#ntnumenu.selectedtab_home 	li#tab_home,
+#ntnumenu.selectedtab_evu 			li#tab_evu,
+#ntnumenu.selectedtab_forskning 	li#tab_forskning,
+#ntnumenu.selectedtab_non 			li#tab_non,
+#ntnumenu.selectedtab_om 			li#tab_om,
+#ntnumenu.selectedtab_aktuelt	 	li#tab_aktuelt,
+#ntnumenu.selectedtab_home 		li#tab_home,
 #ntnumenu.selectedtab_studies 	li#tab_studies,
-#ntnumenu.selectedtab_living 	li#tab_living,
+#ntnumenu.selectedtab_living 		li#tab_living,
 #ntnumenu.selectedtab_research 	li#tab_research,
-#ntnumenu.selectedtab_bai 	li#tab_bai,
-#ntnumenu.selectedtab_about 	li#tab_about,
+#ntnumenu.selectedtab_bai 			li#tab_bai,
+#ntnumenu.selectedtab_about 		li#tab_about,
 #ntnumenu.selectedtab_contact 	li#tab_contact{
 	margin-left: -1px;
 	border-style: solid;
@@ -194,26 +193,30 @@
 	display: block;
 }
 
-#ntnumenu.selectedtab_start 	li#tab_start a,
-#ntnumenu.selectedtab_studier 	li#tab_studier a,
+#ntnumenu.selectedtab_start 		li#tab_start a,
+#ntnumenu.selectedtab_studier 		li#tab_studier a,
 #ntnumenu.selectedtab_student 	li#tab_student a,
-#ntnumenu.selectedtab_evu 	li#tab_evu a,
-#ntnumenu.selectedtab_forskning li#tab_forskning a,
-#ntnumenu.selectedtab_non 	li#tab_non a,
-#ntnumenu.selectedtab_om 	li#tab_om a,
+#ntnumenu.selectedtab_evu 			li#tab_evu a,
+#ntnumenu.selectedtab_forskning 	li#tab_forskning a,
+#ntnumenu.selectedtab_non 			li#tab_non a,
+#ntnumenu.selectedtab_om 			li#tab_om a,
 #ntnumenu.selectedtab_aktuelt 	li#tab_aktuelt a,
-#ntnumenu.selectedtab_home 	li#tab_home a,
+#ntnumenu.selectedtab_home 		li#tab_home a,
 #ntnumenu.selectedtab_studies 	li#tab_studies a,
-#ntnumenu.selectedtab_living 	li#tab_living a,
+#ntnumenu.selectedtab_living 		li#tab_living a,
 #ntnumenu.selectedtab_research 	li#tab_research a,
-#ntnumenu.selectedtab_bai 	li#tab_bai a,
-#ntnumenu.selectedtab_about 	li#tab_about a,
+#ntnumenu.selectedtab_bai 			li#tab_bai a,
+#ntnumenu.selectedtab_about 		li#tab_about a,
 #ntnumenu.selectedtab_contact 	li#tab_contact a {
 	color: #000;
-	background: white;
+	background: __background__;
 	border: 0;
 	padding-bottom: .6em;
 	margin-bottom: -.2em;
+}
+
+#content {
+	margin-bottom: 1.5em;
 }
 
 #searchform {
@@ -255,12 +258,10 @@
 	padding: 3px;
 }
 
-
-
 #address {
 	text-align: center;
 	color: __text_alt__;
-	padding: .75em 0;
+	padding: .75em;
 }
 
 #ntnufooter {
@@ -275,7 +276,11 @@
 	width: auto;
 	clear: none;
 	list-style: none;
-	margin: 0 0 0 6em;
+	margin: 0 0 0 5.5em;
+}
+
+body.en #ntnufooter ul {
+	margin: 0 0 0 4em;
 }
 
 #ntnufooter ul li {
@@ -286,7 +291,7 @@
 	background-position: 0 50%;
 }
 
-#ntnufooter ul:first-child {
+#ntnufooter ul:first-child, body.en #ntnufooter ul:first-child {
 	margin-left: 20em;
 }
 

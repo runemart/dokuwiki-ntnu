@@ -20,11 +20,11 @@ body {
 
 /* the document */
 #pagewrapper, #pagewrapperwide {
-	border: 1px solid #999;
+	border: 1px solid __border_dark__;
 	border-width: 0 1px 1px 1px;
 	margin: 0 auto;
-	background: white;
-	-moz-box-shadow: 0 .25em .5em -.15em #999;
+	background: __background__;
+	-moz-box-shadow: 0 .25em .5em -.15em __border_dark__;
 }
 
 .marginwrapper {
@@ -354,7 +354,7 @@ div.dokuwiki div.preview {
 	width: __page_width__;
 	display: block;
 	border-bottom: 1px dotted __border_light__;
-	margin-bottom: 3em;
+	margin-bottom: 1.5em;
 }
 
 #breadcrumbs div {

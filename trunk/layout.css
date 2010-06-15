@@ -28,16 +28,16 @@ div.dokuwiki .bar-right {
 #meta {
 	clear: both;
 	color: __text_alt__;
-	border-top: 1px dotted __border_light__;
-	border-bottom: 1px solid __border_light__;
+	border-bottom: 1px dotted __border_light__;
 	width: __page_width__;
-	margin-top: 1.5em;
+	margin-top: -1px;
+	font-style: italic;
 }
 
 #meta .user, #meta .doc {
 	float: left;
 	font-size: 0.9em;
-	padding: .5em 1em;
+	padding: 0.5em 1em;
 }
 
 #meta .doc {
