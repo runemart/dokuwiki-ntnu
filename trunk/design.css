@@ -354,7 +354,7 @@ div.dokuwiki div.preview {
 	width: __page_width__;
 	display: block;
 	border-bottom: 1px dotted __border_light__;
-	margin-bottom: 1.5em;
+	margin-bottom: 3em;
 }
 
 #breadcrumbs div {
