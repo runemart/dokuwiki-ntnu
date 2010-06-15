@@ -389,5 +389,3 @@ function checkTemplateUpdates(){
 			msg($msg." <a href=\"?do=admin&amp;page=config#template_settings\">[IME #".$nr."]</a>",2);
 
 }
-
-?>
