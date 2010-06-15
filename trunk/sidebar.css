@@ -1,5 +1,6 @@
 #sidebar {
 	width: __sidebar_width__;
+	margin-bottom: 1.5em;
 }
 
 #sidebar hr {
