@@ -7,12 +7,11 @@
  * @modified-by Rune M. Andersen <rune.andersen@ime.ntnu.no>
  */
 
-/* -------------- top row --------------- */
-
-/* ---------------	top and bottom bar ---------------- */
+/* ---------------	bottom bar ---------------- */
 div.dokuwiki .bar {
-	padding: 0.1em 0.15em;
 	clear: both;
+	margin: 1.5em auto 1.5em auto;
+	width: __page_width__;
 }
 
 div.dokuwiki .bar-left {
@@ -24,30 +23,26 @@ div.dokuwiki .bar-right {
 	text-align: right;
 }
 
-div.dokuwiki #bar__bottom {
-	margin-bottom:3px;
-}
+/* ------------- Metadata ----------------------- */
 
-/* ------------- File Metadata ----------------------- */
-
-div.dokuwiki div.meta {
+#meta {
 	clear: both;
 	color: __text_alt__;
-	border-top: 1px dashed __border_dark__;
-	border-bottom: 1px solid __border_dark__;
+	border-top: 1px dotted __border_light__;
+	border-bottom: 1px solid __border_light__;
 	width: __page_width__;
+	margin-top: 1.5em;
 }
 
-div.dokuwiki div.meta div.user {
+#meta .user, #meta .doc {
 	float: left;
 	font-size: 0.9em;
-	padding: 0.1em 0.5em;
+	padding: .5em 1em;
 }
 
-div.dokuwiki div.meta div.doc {
+#meta .doc {
+	float: none;
 	text-align: right;
-	font-size: 0.9em;
-	padding: 0.1em 0.5em;
 }
 
 /* ------------- Included frames ----------------------- */
@@ -82,24 +77,25 @@ div.dokuwiki div.column-three {
 	float: left;
 }
 
-div.dokuwiki div.pagewrapperwide div.columns-float {
+#pagewrapper, #pagewrapperwide {
 	width: __page_width__;
 }
 
-div.dokuwiki div.pagewrapperwide div.column-one {
+#pagewrapperwide div.columns-float {
+	width: __page_width__;
+}
+
+#pagewrapperwide div.column-one {
 	width: __wide_content_width__;
 }
 
+div.dokuwiki div.page {
+	width: __content_width__;
+	margin-right: 2em;
+	margin-left: 2em;
+}
 
-/* Debug colors */
-
-/*
-div.dokuwiki div.columns-float {background: yellow;}
-div.dokuwiki div.page {background: lightgreen;}
-div.dokuwiki div.menu {background: lightblue;}
-div.dokuwiki div.sidebar {background: orange;}
-div.dokuwiki div.breadcrumbs {background: pink;}
-div.dokuwiki div.footer {background: PeachPuff;}
-div.dokuwiki div.meta {background: Tomato;}
-*/
+#pagewrapperwide div.page {
+	width: __wide_content_width__;
+}
 
