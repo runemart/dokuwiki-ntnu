@@ -19,9 +19,9 @@ header('Surrogate-Control: no-store');
 // must be run from within DokuWiki
 if (!defined('DOKU_INC')) die();
 
+// include template functions
 require_once(dirname(__FILE__).'/tpl_functions.php');
-
-// includes local functions if a file called tpl_functions.local.php exists in the template folder
+// includes local functions if a file "tpl_functions.local.php" exists in the template folder
 @include_once('tpl_functions.local.php');
 
 // english or norwegian branch of site?
@@ -31,15 +31,6 @@ $pagelang = tpl_pagelang($ID);
 if($conf['authtype'] == 'innsida'){
 	global $auth;
 	$auth->loginRedirect();
-}
-
-// overwrites bad translation
-if($pagelang == 'en'){
-	$lang['youarehere'] = 'Path';
-	$lang['hits'] = 'hits';
-} else {
-	$lang['youarehere'] = 'Sti';
-	$lang['hits'] = 'treff';
 }
 
 // checks for template updates
@@ -53,17 +44,14 @@ checkTemplateUpdates();
 	<head profile="http://example.org/xmdp/robots-profile#">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title><?php tpl_pagetitle()?> - <?php echo strip_tags($conf['title'])?></title>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-		<script type="text/javascript">
-			// DokuWiki already use the $()-shortname, doing it this way prevents name conflicts
-			jQuery.noConflict();
-		</script>
+		<script type="text/javascript" src="<?php echo DOKU_TPL?>js/jquery-1.4.2.min.js"></script>
+		<script type="text/javascript" src="<?php echo DOKU_TPL?>js/util.js"></script>
 		<!-- custom meta start -->
 		<?php @include_once('meta.'.$pagelang.'.php'); ?>
 		<!-- custom meta end -->
 		<?php tpl_metaheaders()?>
 		<!-- style and icons-->
-		<link rel="stylesheet" media="handheld" type="text/css" href="<?php echo DOKU_TPL?>handheld.css" />
+		<link rel="stylesheet" type="text/css" href="<?php echo DOKU_TPL?>printmobile.css" />
 		<link rel="icon" href="<?php echo DOKU_TPL?>images/favicon.ico" type="image/ico" />
 		<link rel="shortcut icon" href="<?php echo DOKU_TPL?>images/favicon.ico" />
 		<link rel="apple-touch-icon" href="<?php echo DOKU_TPL?>images/apple-touch-icon.png" />
@@ -71,28 +59,25 @@ checkTemplateUpdates();
 	<body class="dwbody <?php echo $pagelang; ?>" id="pageid_<?php echo $ID; ?>">
 		<!-- dokuwiki start -->
 		<div class="dokuwiki">
-			<div class="offscreen robots-noindex">
+			<div class="offscreen">
 				<?php include_once('quicknav.'.$pagelang.'.php')?>
 			</div>
 
+			<!-- header start -->
+			<div id="header">
+				<?php include_once('head.'.$pagelang.'.php')?>
+				<div class="clearer"></div>
+			</div>
+			<!-- header end -->
+
+		<div class="marginwrapper">
 			<!-- pagewrapper start -->
-			<div id="pagewrapper" class="pagewrapper<?php echo (tpl_hasSidebar() && $ACT == 'show') ? " " : " pagewrapperwide";?>">
-
-				<!-- header start -->
-				<div class="header robots-noindex">
-					<div id="ntnuheader" <?php echo ((date('Y') == 2010) ? 'class="ntnu2010"' : ''); ?>>
-						<?php include_once('head.'.$pagelang.'.php')?>
-						<div class="clearer"></div>
-					</div>
-				</div>
-				<!-- header end -->
-
-			<?php html_msgarea()?>
-
+			<div id="<?php echo (tpl_hasSidebar() && $ACT == 'show') ? "pagewrapper" : "pagewrapperwide";?>">
+				<?php html_msgarea()?>
 				<!-- breadcrumbs start -->
-				<div class="breadcrumbs robots-noindex">
-					<div class="padder">
-						<?php if($conf['youarehere']) {ob_start("tpl_myyouarehere");tpl_youarehere();ob_end_flush();}	?>
+				<div id="breadcrumbs">
+					<div>
+						<?php ob_start("tpl_myyouarehere");tpl_youarehere();ob_end_flush();	?>
 					</div>
 				</div>
 				<!-- breadcrumbs end -->
@@ -103,7 +88,7 @@ checkTemplateUpdates();
 				<div class="columns-float">
 					<!-- wikipage start -->
 					<div class="page column-one">
-						<div class="padder" id="content">
+						<div id="content">
 							<a name="content"></a>
 							<?php tpl_content()?>
 							<div class="clearer"></div>
@@ -112,12 +97,10 @@ checkTemplateUpdates();
 					<!-- wikipage stop -->
 					<hr class="offscreen" />
 					<!-- menu start -->
-					<div class="menu column-two">
-						<div class="padder">
-							<a name="localnav"></a>
-							<?php tpl_sidebar('menu') ?>
-							<div class="clearer"></div>
-						</div>
+					<div id="menu" class="column-two">
+						<a name="localnav"></a>
+						<?php tpl_sidebar('menu') ?>
+						<div class="clearer"></div>
 					</div>
 					<!-- menu end -->
 				</div>
@@ -127,10 +110,9 @@ checkTemplateUpdates();
 
 				<?php if(tpl_hasSidebar() && $ACT == 'show'){ ?>
 					<!-- sidebar start -->
-					<div class="sidebar column-three">
-						<div class="padder">
-							<?php tpl_sidebar('sidebar') ?>
-						</div>
+					<div id="sidebar" class="column-three">
+						<?php tpl_sidebar('sidebar') ?>
+						<div class="clearer"></div>
 					</div>
 					<!-- sidebar end -->
 				<?php } ?>
@@ -138,19 +120,20 @@ checkTemplateUpdates();
 				<hr class="offscreen" />
 
 				<!-- meta start -->
-				<div class="meta robots-noindex">
+				<div id="meta">
 					<div class="user">
 						<?php tpl_userinfo()?>
 					</div>
 					<div class="doc">
 						<?php tpl_mypageinfo()?>
 					</div>
+					<div class="clearer"></div>
 				</div>
 				<!-- meta end -->
 
 				<!-- footer start -->
-				<div class="footer robots-noindex">
-					<div class="address">
+				<div id="footer">
+					<div id="address">
 						<?php include_once('address.'.$pagelang.'.php');?>
 					</div>
 					<div class="clearer"></div>
@@ -160,13 +143,14 @@ checkTemplateUpdates();
 			<!-- pagewrapper end -->
 
 			<!-- below footer start -->
-			<div id="ntnufooter" class="robots-noindex">
+			<div id="ntnufooter">
 				<?php include_once('foot.'.$pagelang.'.php')?>
+				<div class="clearer"></div>
 			</div>
 			<!-- below footer end -->
 
 			<!-- button row start -->
-			<div class="bar robots-noindex" id="bar__bottom">
+			<div class="bar" id="bar__bottom">
 				<div class="bar-left" id="bar__bottomleft">
 					<?php
 						if($_SERVER['REMOTE_USER'] || auth_quickaclcheck($ID) > AUTH_READ) {
@@ -190,7 +174,8 @@ checkTemplateUpdates();
 				<div class="clearer"></div>
 			</div>
 			<!-- button row end -->
-
+		</div>
+		<!-- marginwrapper end -->
 		</div>
 		<!-- dokuwiki end -->
 
@@ -201,22 +186,17 @@ checkTemplateUpdates();
 			if (function_exists('ga_google_analytics_code')) ga_google_analytics_code();
 		?>
 		<!-- google analytics end -->
-		<script type="text/javascript" src="<?php echo DOKU_TPL?>js/util.js"></script>
 		<script type="text/javascript">
 			// Ready-function loads when document is fully loaded
 			jQuery(document).ready(function(){
 					// Prepare search field to auto update text and color
 					prepareSearchField();
-
 					// Include e-mail deobfuscation script if necessary
 					<?php echo ($conf['mailguard'] == 'visible') ? 'deObfuscateEmails();' : '';  ?>
-
 					// Add link footnotes
 					// TODO: make jQuery script
-
 					// Trigger indexer
 					jQuery.get('<?= $conf['basedir'].'lib/exe/indexer.php?id='.$ID.'&amp;'.time() ?>');
-
 			});
 		</script>
 	</body>
