@@ -27,6 +27,8 @@
 	  font: 10pt Arial, Verdana, Helvetica, sans-serif;
 	  background-color: White;
 	  color: Black;
+	  padding: 3em;
+
 	}
 
 	table {
@@ -51,11 +53,9 @@
 	  text-align:right;
 	}
 
-	#breadcrumbs {
-	  display:none;
-	}
-
-	div.secedit{
+	div.secedit,
+	#header,
+	#menu {
 	  display:none;
 	}
 
@@ -68,7 +68,8 @@
 	a.urlextern:after
 	{
 	   content: " (" attr(href) ")";
-	   font-size: 90%;
+	   font-size: 80%;
+	   color: #000;
 	}
 
 	/* hide print links if JS library is in place*/
@@ -103,10 +104,10 @@
 	}
 
 	/* special headlines */
-	h1 {font-size: 160%; font-weight: bold;}
+	h1 {font-size: 170%; font-weight: bold; padding-top: 1em; }
 	h2 {font-size: 150%; }
-	h3 {font-size: 140%; border-bottom: none; }
-	h4 {font-size: 120%; border-bottom: none; }
+	h3 {font-size: 130%; border-bottom: none; }
+	h4 {font-size: 110%; border-bottom: none; }
 	h5 {font-size: 100%; border-bottom: none; }
 
 	/* embedded images */
