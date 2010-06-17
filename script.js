@@ -27,17 +27,17 @@ function deObfuscateEmails(){
 }
 
 function prepareSearchField(){
-	jQuery('#query').css('color', '#888');
-	var $searchTextDefault = jQuery('#query').attr('value');
-	jQuery('#query').focusin(function(){
-		jQuery(this).css('color', '#000');
+	jQuery('#searchform').removeClass('focus');
+	var $searchTextDefault = jQuery('#searchform #query').attr('value');
+	jQuery('#searchform #query').focusin(function(){
+		jQuery('#searchform').addClass('focus');
 		if(jQuery(this).attr('value') == $searchTextDefault){
 			jQuery(this).attr('value', '');
 		}
 	});
-	jQuery('#query').focusout(function(){
+	jQuery('#searchform #query').focusout(function(){
 		if(jQuery(this).attr('value') == ''){
-			jQuery(this).css('color', '#888');
+			jQuery('#searchform').removeClass('focus');
 			jQuery(this).attr('value', $searchTextDefault);
 		}
 	});
