@@ -15,23 +15,15 @@
 	</div>
 </div>
 
-<!--
 <div id="searchform">
 	<form action="http://www.ntnu.no/sok/search.fast" method="get" title="Søk i NTNUs nettsider">
 		<fieldset>
-			<legend><span class="offscreen">Søk i NTNUs nettsider</span></legend>
-			<label for="query">
-				<span class="offscreen">Søk etter:</span>
-				<input id="query" size="12" type="text" name="s.sm.query" value="Søk her..." accesskey="4" title="Søk" />
-			</label>
-			<label for="sok">
-				<input type="submit" id="sok" value="Søk" />
-			</label>
+			<legend class="offscreen">Søk i NTNUs nettsider</legend>
+			<label for="query"><span class="offscreen">Søk etter:</span></label>
+			<input id="query" type="text" name="s.sm.query" value="Søk her..." accesskey="4" title="Søk" class="query" /><input type="submit" id="sok" value="Søk" class="submit" />
 		</fieldset>
-		<div class="clearer"></div>
 	</form>
 </div>
--->
 
 <?php //echo tpl_languageSelector('no'); ?>
 

@@ -139,7 +139,7 @@
 #ntnumenuwrap {
 	width: __page_width__;
 	margin: 0 auto;
-	margin-top: 9em;
+	margin-top: 2em;
 	border-style: solid;
 	border-color: __border_dark__;
 	border-width: 1px 1px 0 1px;
@@ -220,44 +220,59 @@
 	margin-bottom: 1.5em;
 }
 
-#searchform {
-	position: relative;
-	top: -.4em;
-	padding: 0;
-}
+/* Search form */
 
-#searchform form {
+#searchform {
 	width: __page_width__;
 	margin: 0 auto;
-	display: block;
-	position: relative;
+	text-align: right;
+	margin-top: 4em;
 }
 
 #searchform fieldset {
-	vertical-align: top;
-	background: black;
-	border: none;
-	float: right;
-	width: auto;
-	-moz-border-radius: 0 0 .5em .5em;
-	-moz-box-shadow: 0 0 .5em -.1em __text__;
-	padding: 0 1.2em 1.2em;
-	margin-right: -1.2em;
-}
-
-/* størrelser på skjemaelementer er noe prakk. noen bedre forslag? */
-
-#searchform #sok,
-#searchform #query {
-	font-family: Arial;
-	padding: 1px 2px;
+	background: __background__;
 	border: 1px solid __border_dark__;
+	width: 100%;
+	padding: 1px;
+	bottom: 0;
+	width: auto;
+	display: inline;
+	*padding: 0 1px 1px 1px;
+	margin-right: -1px;
 }
 
-#searchform #query {
-	width: 21.5em;
-	padding: 3px;
+#searchform .query,
+#searchform .submit {
+	font: 1.1em Arial, Helvetica, Sans-serif !important;
+	vertical-align: middle;
 }
+
+#searchform .query {
+	border: 1px solid __background__;
+	border-right: 0;
+	padding: 5px;
+	width: 15em;
+}
+
+#searchform .submit {
+	background: __border_light__ url(images/menu-gradient.png) 0 0 repeat-x;
+	border-top: 1px solid __border_light__;
+	border-right: 1px solid __border_dark__;
+	border-bottom: 1px solid __border_dark__;
+	border-left: 1px solid __border_light__;
+	font-weight: bold !important;
+	line-height: 1.5em !important;
+	padding: 5px 12px;
+	*padding: 1px 3px;
+	text-shadow: 0 1px 0 #fff;
+}
+
+#searchform .submit::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+/* Footer */
 
 #address {
 	text-align: center;
@@ -268,7 +283,7 @@
 #ntnufooter {
 	width: __page_width__;
 	margin: 0 auto;
-	background: url(images/footer_logo.png) 1.5em 2em no-repeat;
+	background: url(images/logo.footer.no.png) 1.5em 2em no-repeat;
 	padding-top: 1.5em;
 }
 
@@ -300,7 +315,6 @@ body.en #ntnufooter ul {
 	text-decoration: none;
 }
 
-
 #ntnufooter li.kart {background-image: url(icons/map.png)}
 #ntnufooter li.emner {background-image: url(icons/books.png)}
 #ntnufooter li.ledelsen {background-image: url(icons/building.png)}
@@ -318,7 +332,6 @@ body.en #ntnufooter ul {
 #ntnufooter li.rss {background-image: url(icons/feed.png)}
 #ntnufooter li.blog {background-image: url(icons/balloon.png)}
 #ntnufooter li.twitter {background-image: url(icons/balloon-twitter.png)}
-
 
 
 /* General NTNU and Innsida color classes */
