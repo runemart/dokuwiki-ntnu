@@ -1,4 +1,4 @@
-// DokuWiki already use the $()-shortname, doing it this way prevents name conflicts
+/* DOKUWIKI:include_once js/jquery142.min.js */
 jQuery.noConflict();
 
 function deObfuscateEmail(a){
@@ -42,3 +42,6 @@ function prepareSearchField(){
 		}
 	});
 }
+
+
+
