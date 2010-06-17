@@ -27,7 +27,7 @@
 	color: __text__;
 	text-decoration: none;
 	display: block;
-	background: url(images/bullet.png) .3em 50% no-repeat;
+	background: url(images/bullet.png) .3em .4em no-repeat;
 	padding: 0 0 0 1.5em;
 }
 
