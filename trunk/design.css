@@ -343,10 +343,10 @@ div.dokuwiki a.wikilink2 {
 /* ------------- Page elements ----------------- */
 
 div.dokuwiki div.preview {
-	background-color: __background_neu__;
-	margin: 0 0 0 2em;
-	padding: 0.5em;
-	border: 1px dashed __text__;
+	background-color: __background__;
+	padding: 1.5em 0 0 1em;
+	border-left: .5em solid rgb(0,80,158);
+	margin-left: -1.5em;
 }
 
 #breadcrumbs {
