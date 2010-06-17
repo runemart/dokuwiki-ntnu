@@ -15,7 +15,7 @@ body {
 	font: 75%/1.5 Arial, "Lucida Grande", Verdana, Lucida, Helvetica, sans-serif;
 	background-color: __background__;
 	color: __text__;
-	background: url(images/company_logo.jpg) 50% 30px no-repeat;
+	background: url(images/logo.header.no.jpg) 50% 30px no-repeat;
 }
 
 /* the document */
