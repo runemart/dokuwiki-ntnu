@@ -1,22 +1,15 @@
 /* Top bar (bluebar which really is black) */
 
-#bluebarwrap {
-	padding-bottom: .4em;
+#bluebar {
 	width: 100%;
 	min-width: __body_width__;
-	overflow: hidden;
-}
-
-#bluebar {
 	background-color: __text__;
-	-moz-box-shadow: 0 0 .5em -.1em __text__;
 	border-top: 4px solid __ntnublue__;
 }
 
-#bluebar #bluebarinner {
+#bluebar .marginwrapper {
 	margin: 0 auto;
 	width: __page_width__;
-	padding: .4em 0;
 }
 
 #bluebar h1 {
@@ -26,6 +19,7 @@
 	line-height: 1.1;
 	letter-spacing: 1px;
 	font-variant: small-caps;
+	padding: .333em 0;
 }
 
 #bluebar h1 a {
@@ -34,112 +28,71 @@
 	height: 9em;
 }
 
-#bluebar ul {
-	float: right;
-	margin: 0;
-}
-
-#bluebar li {
-	float: left;
-	margin: 0 .9em;
-	padding: 0 .3em;
-	color: __ntnublue__;
-}
-
 #bluebar a {
 	text-decoration: none;
 	color: __background__ !important;
 }
 
-#bluebar li:first-child {
+#ntnulenker {
+	float: right;
+	margin: 0;
 	list-style: none;
 }
 
-#bluebar li:last-child {
-	padding-right: .2em;
-	margin-right: 0;
+#ntnulenker li {
+	float: left;
+	color: __ntnublue__;
+	position: relative;
 }
 
-/* Trick to hide the selector for browsers not understanding > */
-
-#mainaltlang>a {
-	display: none;
+#ntnulenker li a {
+	padding: .4em 1em;
+	display: block;
 }
 
-#languageselector span {
-	display: none;
+/* Language selector */
+
+#ntnulenker li a.selector {
+	padding-right: 20px;
+	background: url(images/droparrow-soft.gif) 100% 50% no-repeat;
 }
 
-#languageselector>span {
-	display: inline;
+#ntnulenker li:hover a.selector {
+	background: black url(images/droparrow.gif) 100% 50% no-repeat;
 }
-
-/* end trick */
 
 #languageselector {
-	position: absolute;
-	width: auto;
-}
-
-#languageselector>span {
-	color: __text__;
-	padding: .2em 1.3em .2em .5em;
-	border: 1px solid __border_dark__;
-	background: __background__ url(images/droparrow-soft.gif) 100% 50% no-repeat;
-	cursor: pointer;
-	display: block;
-	width: 8em;
-}
-
-#languageselector:hover>span {
-	border: 1px solid __text__;
-	background-image: url(images/droparrow.gif);
-}
-
-#languageselector ul {
-	background-color: __background__;
-	border: 1px solid __text__;
-	position: relative;
-	top: -1px;
 	display: none;
+	position: absolute;
+	min-width: 100%;
+	width: auto;
+	*width: 100%;
 	list-style: none;
 	margin: 0;
 }
 
-#languageselector:hover> ul {
+#ntnulenker li:hover #languageselector {
 	display: block;
 }
 
-#languageselector ul li {
-	padding: 0;
+
+#languageselector li  {
+	width: 100%;
+}
+
+#languageselector li a {
 	display: block;
-	z-index: 500;
+	background: __text__;
+	padding: .4em 1em;
 }
 
-#languageselector ul li:hover {
-	background-color: __ntnu3__;
-}
-
-#languageselector ul li a {
-	padding: .2em .5em;
-	display: block;
-	text-decoration: none;
-}
-
-#languageselector ul li:hover a {
-	color: __background__;
-}
-
-#languageselector ul li.current {
-	border-top: 1px solid __text__;
-}
 
 /* Main tab menu */
 
 #ntnumenuwrap {
 	width: __page_width__;
 	margin: 0 auto;
-	margin-top: 2em;
+	margin-top: 3em;
 	border-style: solid;
 	border-color: __border_dark__;
 	border-width: 1px 1px 0 1px;
