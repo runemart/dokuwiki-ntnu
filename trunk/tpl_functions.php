@@ -311,7 +311,7 @@ function tpl_languageSelector($lang = 'no'){
 		case 'no':
 			$title = 'Alternative språkvarianter';
 			$mainAltLang = 'NTNU.no (Norsk)';
-			$mainAltURL = ($translate['no']) ? $translate['no'] : '';
+			$mainAltURL = 'http://ntnu.no';
 			$txt = 'Oversett gjeldende side til norsk';
 			$generaltxt = 'Norsk versjon av nettstedet';
 			break;
@@ -319,7 +319,7 @@ function tpl_languageSelector($lang = 'no'){
 		case 'en':
 			$title = 'Alternative languages';
 			$mainAltLang = 'NTNU.edu (English)';
-			$mainAltURL = ($translate['en']) ? $translate['en'] : 'english';
+			$mainAltURL = 'http://ntnu.edu';
 			$txt = 'Translate current page to English';
 			$generaltxt = 'English version of the website';
 			break;
@@ -327,10 +327,10 @@ function tpl_languageSelector($lang = 'no'){
 
 
 	if($translate[$lang]){
-		$ret .= '<li class="selector"><a class="flag-'.$lang.'" href="'.wl($mainAltURL).'" title="'.$generaltxt.'">'.$mainAltLang.'</a>';
+		$ret .= '<li class="selector"><a class="flag-'.$lang.'" href="'.$mainAltURL.'" title="'.$generaltxt.'">'.$mainAltLang.'</a>';
 		$ret .= '<ul id="languageselector"><li><a href="'.wl($translate[$lang]).'" title="'.$txt.'">'.p_get_first_heading($translate[$lang]).'</a></li></ul></li>';
 	} else {
-		$ret .= '<li><a class="flag-'.$lang.'" href="'.wl($mainAltURL).'" title="'.$generaltxt.'">'.$mainAltLang.'</a></li>';
+		$ret .= '<li><a class="flag-'.$lang.'" href="'.$mainAltURL.'" title="'.$generaltxt.'">'.$mainAltLang.'</a></li>';
 	}
 	return $ret;
 }
