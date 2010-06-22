@@ -15,8 +15,8 @@
 	<form action="http://www.ntnu.no/sok/search.fast" method="get" title="Søk i NTNUs nettsider">
 		<fieldset>
 			<legend class="offscreen">Søk i NTNUs nettsider</legend>
-			<label for="query"><span class="offscreen">Søk etter:</span></label>
-			<input id="query" type="text" name="s.sm.query" value="Søk etter..." accesskey="4" title="Søk" class="query" /><input type="submit" id="sok" value="Søk" class="submit" />
+			<label for="query" accesskey="4"><span class="offscreen">Søk etter:</span></label>
+			<input id="query" type="text" name="s.sm.query" value="Søk etter..." title="Søk" class="query" /><input type="submit" id="sok" value="Søk" class="submit" />
 		</fieldset>
 	</form>
 </div>

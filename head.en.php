@@ -15,8 +15,8 @@
 	<form action="http://www.ntnu.no/sok/search.fast" method="get" title="Search NTNU web pages">
 		<fieldset>
 			<legend class="offscreen">Search NTNU web pages</legend>
-			<label for="query"><span class="offscreen">Search for:</span></label>
-			<input id="query" type="text" name="s.sm.query" value="Search for..." accesskey="4" title="Search" class="query" /><input type="submit" id="sok" value="Search" />
+			<label for="query" accesskey="4"><span class="offscreen">Search for:</span></label>
+			<input id="query" type="text" name="s.sm.query" value="Search for..." title="Search" class="query" /><input type="submit" id="sok" value="Search" />
 			<input type="hidden" name="lang" value="en" />
 		</fieldset>
 	</form>
