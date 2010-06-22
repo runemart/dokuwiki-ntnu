@@ -1,6 +1,6 @@
 <div id="bluebar">
 	<div class="marginwrapper">
-		<h1><a href="http://www.ntnu.edu" title="Norwegian University of Science and Technology">Norwegian University of Science and Technology</a></h1>
+		<h1><a href="http://www.ntnu.edu" title="Jump to NTNU's start page" accesskey="1">Norwegian University of Science and Technology</a></h1>
 		<ul id="ntnulenker" title="Common links">
 			<?php echo tpl_languageSelector('no'); ?>
 			<?php echo tpl_languageSelector('en'); ?>
