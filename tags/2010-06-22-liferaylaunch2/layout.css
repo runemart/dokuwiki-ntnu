@@ -1,0 +1,101 @@
+
+/**
+ * Tableless Layout for NTNU template
+ *
+ * @author Andreas Gohr <andi@splitbrain.org>
+ * @author moraes <moraes@tipos.com.br>
+ * @modified-by Rune M. Andersen <rune.andersen@ime.ntnu.no>
+ */
+
+/* ---------------	bottom bar ---------------- */
+div.dokuwiki .bar {
+	clear: both;
+	margin: 1.5em auto 1.5em auto;
+	width: __page_width__;
+}
+
+div.dokuwiki .bar-left {
+	float: left;
+}
+
+div.dokuwiki .bar-right {
+	float: right;
+	text-align: right;
+}
+
+/* ------------- Metadata ----------------------- */
+
+#meta {
+	clear: both;
+	color: __text_alt__;
+	border-bottom: 1px dotted __border_light__;
+	width: __page_width__;
+	margin-top: -1px;
+	font-style: italic;
+}
+
+#meta .user, #meta .doc {
+	float: left;
+	font-size: 0.9em;
+	padding: 0.5em 1em;
+}
+
+#meta .doc {
+	float: none;
+	text-align: right;
+}
+
+/* ------------- Included frames ----------------------- */
+
+iframe {
+	padding: 0;
+	margin: 0;
+	border: none;
+	border-width: 1px 0 1px 1px;
+	overflow: visible;
+	height: 52em;
+}
+
+
+/* ====================================================================
+COLUMNS LAYOUT
+-------------------------------------------------------------------- */
+div.dokuwiki div.columns-float {
+	float: left;
+	width: __menu_content_width__;
+}
+
+div.dokuwiki div.column-one {
+	float: right;
+}
+
+div.dokuwiki div.column-two {
+	float: left;
+}
+
+div.dokuwiki div.column-three {
+	float: left;
+}
+
+#pagewrapper, #pagewrapperwide {
+	width: __page_width__;
+}
+
+#pagewrapperwide div.columns-float {
+	width: __page_width__;
+}
+
+#pagewrapperwide div.column-one {
+	width: __wide_content_width__;
+}
+
+div.dokuwiki div.page {
+	width: __content_width__;
+	margin-right: 2em;
+	margin-left: 2em;
+}
+
+#pagewrapperwide div.page {
+	width: __wide_content_width__;
+}
+
