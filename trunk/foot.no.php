@@ -11,7 +11,7 @@
 	<li class="fakulteter"><a href="http://ntnu.no/fakulteter">Fakulteter og institutter</a></li>
 	<li class="adm"><a href="http://ntnu.no/adm">Administrative enheter</a></li>
 	<li class="ledelsen"><a href="http://ntnu.no/rektor">Ledelsen</a></li>
-	<li class="redaktor"><a href="http://ntnu.no/adm/redaktor">Ansvarlig redaktør</a></li>
+	<li class="redaktor"><a href="http://ntnu.no/web-info/om">Ansvarlig redaktør</a></li>
 </ul>
 
 <ul>
