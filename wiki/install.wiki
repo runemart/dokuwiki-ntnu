@@ -1,6 +1,7 @@
 = Installing the NTNU template =
 
-  # Unzip the archive to your `tpl` folder (`tpl\ntnu`).
+  # Download the lates template
+  # Unzip the archive to your template folder (eg. `/my-wiki-installation/lib/tpl/ntnu`).
   # Enter the admin userface and select "Configuration manager".
   # Under "Basic settings", select "ntnu" as template. 
   # Save changes
@@ -12,6 +13,6 @@ Contact information in the template footer is configurable through "Template set
 You may also wish to specify:
 
   * Under which "NTNU-tab" your site is located.
-  * If you want the users currently visited page to be emphasized in the menu.
+  * If you want the currently shown page to be emphasized in the menu.
   * [breadcrumbs Custom breadcrumbs]
   * File name settings for autodetected [menus] and [sidebar sidebars].
