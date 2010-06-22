@@ -11,7 +11,7 @@
 	<li class="fakulteter"><a href="http://ntnu.edu/fakulteter">Faculties and departments</a></li>
 	<li class="adm"><a href="http://ntnu.edu/adm">Administrative units</a></li>
 	<li class="ledelsen"><a href="http://ntnu.edu/rektor">Management</a></li>
-	<li class="redaktor"><a href="http://ntnu.edu/adm/redaktor">Editor</a></li>
+	<li class="redaktor"><a href="http://ntnu.edu/web-info/om">Editor</a></li>
 </ul>
 
 <ul>
