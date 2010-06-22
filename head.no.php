@@ -1,17 +1,13 @@
-<div id="bluebarwrap">
-	<div id="bluebar">
-		<div class="marginwrapper">
-			<div id="bluebarinner">
-				<h1><a href="http://www.ntnu.no" title="Norges teknisk-naturvitenskapelige universitet">Norges teknisk-naturvitenskapelige universitet</a></h1>
-				<ul id="ntnulenker" title="Felleslenker">
-					<li><a href="http://www.ntnu.no" title="Bytt til norsk">NTNU Norsk</a></li>
-					<li><a href="http://www.ntnu.edu" title="Switch to english">NTNU English</a></li>
-					<li><a href="http://www.ntnu.no/ub" title="Bibliotek">Bibliotek</a></li>
-					<li><a href="https://innsida.ntnu.no" title="Logg på intranettet">Intranett</a></li>
-				</ul>
-				<div class="clearer"></div>
-			</div>
-		</div>
+<div id="bluebar">
+	<div class="marginwrapper">
+		<h1><a href="http://www.ntnu.no" title="Norges teknisk-naturvitenskapelige universitet">Norges teknisk-naturvitenskapelige universitet</a></h1>
+		<ul id="ntnulenker" title="Felleslenker">
+			<li><?php echo tpl_languageSelector('no'); ?></li>
+			<li><?php echo tpl_languageSelector('en'); ?></li>
+			<li><a href="http://www.ntnu.no/ub" title="Bibliotek">Bibliotek</a></li>
+			<li><a href="https://innsida.ntnu.no" title="Logg på intranettet">Intranett</a></li>
+		</ul>
+		<div class="clearer"></div>
 	</div>
 </div>
 

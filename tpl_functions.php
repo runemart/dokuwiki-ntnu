@@ -307,28 +307,30 @@ function tpl_languageSelector($lang = 'no'){
 	$ret = '';
 
 	switch($lang){
+		// Norwegian selector
 		case 'no':
 			$title = 'Alternative språkvarianter';
-			$mainAltLang = 'English';
-			$mainAltURL = ($translate['en']) ? $translate['en'] : 'english';
+			$mainAltLang = 'NTNU.no (Norsk)';
+			$mainAltURL = ($translate['no']) ? $translate['no'] : '';
+			$txt = 'Oversett gjeldende side til norsk';
+			$generaltxt = 'Norsk versjon av nettstedet';
 			break;
+		// English selector
 		case 'en':
 			$title = 'Alternative languages';
-			$mainAltLang = 'Norwegian';
-			$mainAltURL = ($translate['no']) ? $translate['no'] : '';
+			$mainAltLang = 'NTNU.edu (English)';
+			$mainAltURL = ($translate['en']) ? $translate['en'] : 'english';
+			$txt = 'Translate current page to English';
+			$generaltxt = 'English version of the website';
 			break;
 	}
 
-	if($translate){
-		$ret .= '<li id="mainaltlang"><a href="'.wl($mainAltURL).'">'.$mainAltLang.'</a></li>';
-		$ret .= '<li title="'.$title.'" id="languageselector"><span>Select language</span><ul>';
-		foreach($translate as $k => $url){
-			$ret .= '<li><a href="'.wl($url).'">('.$k.') '.p_get_first_heading($url).'</a></li>';
-		}
-		$ret .= '<li class="current"><a href="'.wl($ID).'">('.$lang.') '.p_get_first_heading($ID).'</a></li>';
-		$ret .= '</ul></li>';
+
+	if($translate[$lang]){
+		$ret .= '<a class="selector" href="'.wl($mainAltURL).'" title="'.$generaltxt.'">'.$mainAltLang.'</a>';
+		$ret .= '<ul id="languageselector"><li><a href="'.wl($translate[$lang]).'" title="'.$txt.'">'.p_get_first_heading($translate[$lang]).'</a></li></ul>';
 	} else {
-		$ret .= '<li><a href="'.wl($mainAltURL).'">'.$mainAltLang.'</a></li>';
+		$ret .= '<a href="'.wl($mainAltURL).'" title="'.$generaltxt.'">'.$mainAltLang.'</a>';
 	}
 	return $ret;
 }
