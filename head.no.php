@@ -2,9 +2,9 @@
 	<div class="marginwrapper">
 		<h1><a href="http://www.ntnu.no" title="Norges teknisk-naturvitenskapelige universitet">Norges teknisk-naturvitenskapelige universitet</a></h1>
 		<ul id="ntnulenker" title="Felleslenker">
-			<li><?php echo tpl_languageSelector('no'); ?></li>
-			<li><?php echo tpl_languageSelector('en'); ?></li>
-			<li><a href="http://www.ntnu.no/ub" title="Bibliotek">Bibliotek</a></li>
+			<?php echo tpl_languageSelector('no'); ?>
+			<?php echo tpl_languageSelector('en'); ?>
+			<li><a href="http://www.ntnu.no/ub" title="Bibliotek"><span>Bibliotek</a></li>
 			<li><a href="https://innsida.ntnu.no" title="Logg på intranettet">Intranett</a></li>
 		</ul>
 		<div class="clearer"></div>

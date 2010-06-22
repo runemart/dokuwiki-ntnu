@@ -327,10 +327,10 @@ function tpl_languageSelector($lang = 'no'){
 
 
 	if($translate[$lang]){
-		$ret .= '<a class="selector" href="'.wl($mainAltURL).'" title="'.$generaltxt.'">'.$mainAltLang.'</a>';
-		$ret .= '<ul id="languageselector"><li><a href="'.wl($translate[$lang]).'" title="'.$txt.'">'.p_get_first_heading($translate[$lang]).'</a></li></ul>';
+		$ret .= '<li class="selector"><a class="flag-'.$lang.'" href="'.wl($mainAltURL).'" title="'.$generaltxt.'">'.$mainAltLang.'</a>';
+		$ret .= '<ul id="languageselector"><li><a href="'.wl($translate[$lang]).'" title="'.$txt.'">'.p_get_first_heading($translate[$lang]).'</a></li></ul></li>';
 	} else {
-		$ret .= '<a href="'.wl($mainAltURL).'" title="'.$generaltxt.'">'.$mainAltLang.'</a>';
+		$ret .= '<li><a class="flag-'.$lang.'" href="'.wl($mainAltURL).'" title="'.$generaltxt.'">'.$mainAltLang.'</a></li>';
 	}
 	return $ret;
 }
