@@ -8,7 +8,9 @@
 #menu h2 {
 	font-weight: bold;
 	font-size: 1em;
-	line-height: 3em;
+	line-height: 1.5em;
+	padding-top: .75em;
+	padding-bottom: .75em;
 }
 
 #menu ul {
