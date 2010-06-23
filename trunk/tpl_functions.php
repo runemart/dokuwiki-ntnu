@@ -319,7 +319,7 @@ function tpl_languageSelector($lang = 'no'){
 		case 'en':
 			$title = 'Alternative languages';
 			$mainAltLang = 'NTNU.edu (English)';
-			$mainAltURL = 'http://ntnu.edu';
+			$mainAltURL = 'http://www.ntnu.edu';
 			$txt = 'Translate current page to English';
 			$generaltxt = 'English version of the website';
 			break;
