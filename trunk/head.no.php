@@ -5,6 +5,7 @@
 			<?php echo tpl_languageSelector('no'); ?>
 			<?php echo tpl_languageSelector('en'); ?>
 			<li><a href="http://ntnu.no/ub" title="Bibliotek"><span>Bibliotek</a></li>
+			<li><a href="http://alumni.ntnu.no" title="Alumni NTNU">Alumni</a></li>
 			<li><a href="https://innsida.ntnu.no" title="Logg på intranettet">Intranett</a></li>
 		</ul>
 		<div class="clearer"></div>

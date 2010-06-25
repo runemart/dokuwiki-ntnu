@@ -4,7 +4,8 @@
 		<ul id="ntnulenker" title="Common links">
 			<?php echo tpl_languageSelector('no'); ?>
 			<?php echo tpl_languageSelector('en'); ?>
-			<li><a href="http://ntnu.no/ub/english" title="NTNU Library">Library</a></li>
+			<li><a href="http://ntnu.edu/ub" title="NTNU Library">Library</a></li>
+			<li><a href="http://alumni.ntnu.no" title="Alumni NTNU">Alumni</a></li>
 			<li><a href="https://innsida.ntnu.no" title="Log on to the intranet">Intranet</a></li>
 		</ul>
 		<div class="clearer"></div>
