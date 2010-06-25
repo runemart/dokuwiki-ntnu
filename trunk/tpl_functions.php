@@ -203,6 +203,8 @@ function tpl_pagelang($ID){
 	global $conf;
 	if((strpos($ID, ':') > 0 && substr($ID, 0, strpos($ID, ':')) == 'english') || $ID == 'english')
 		return 'en';
+	else  if(isset($_SERVER['HTTP_X_FORWARDED_SERVER']) && in_array($_SERVER['HTTP_X_FORWARDED_SERVER'], array('ntnu.edu', 'www.ntnu.edu')))
+		return 'en';
 	else
 		return $conf['lang'];
 }
@@ -309,7 +311,6 @@ function tpl_languageSelector($lang = 'no'){
 	switch($lang){
 		// Norwegian selector
 		case 'no':
-			$title = 'Alternative språkvarianter';
 			$mainAltLang = 'NTNU.no (Norsk)';
 			$mainAltURL = 'http://ntnu.no';
 			$txt = 'Oversett gjeldende side til norsk';
@@ -317,18 +318,15 @@ function tpl_languageSelector($lang = 'no'){
 			break;
 		// English selector
 		case 'en':
-			$title = 'Alternative languages';
 			$mainAltLang = 'NTNU.edu (English)';
 			$mainAltURL = 'http://www.ntnu.edu';
 			$txt = 'Translate current page to English';
 			$generaltxt = 'English version of the website';
 			break;
 	}
-
-
 	if($translate[$lang]){
 		$ret .= '<li class="selector"><a class="flag-'.$lang.'" href="'.$mainAltURL.'" title="'.$generaltxt.'">'.$mainAltLang.'</a>';
-		$ret .= '<ul id="languageselector"><li><a href="'.wl($translate[$lang]).'" title="'.$txt.'">'.p_get_first_heading($translate[$lang]).'</a></li></ul></li>';
+		$ret .= '<ul id="languageselector"><li><a href="'.$translate[$lang]['url'].'" title="'.$txt.'">'.$translate[$lang]['title'].'</a></li></ul></li>';
 	} else {
 		$ret .= '<li><a class="flag-'.$lang.'" href="'.$mainAltURL.'" title="'.$generaltxt.'">'.$mainAltLang.'</a></li>';
 	}
