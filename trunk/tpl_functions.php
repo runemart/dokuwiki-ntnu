@@ -325,8 +325,24 @@ function tpl_languageSelector($lang = 'no'){
 			break;
 	}
 	if($translate[$lang]){
+		$urltitle = $translate[$lang];
+		$ref = $urltitle['ref'];
+		$title = $urltitle['title'];
+
+		// Calculate URL and link title
+		if(stripos($ref, 'http') === FALSE){
+			// wikilink
+			if(!$title && file_exists(wikiFN($ref)))
+				$title = p_get_first_heading($ref);
+			$url = wl($ref);
+		} else {
+			// http link
+			$url = $ref;
+		}
+		$title = ($title) ? $title : $ref;
+
 		$ret .= '<li class="selector"><a class="flag-'.$lang.'" href="'.$mainAltURL.'" title="'.$generaltxt.'">'.$mainAltLang.'</a>';
-		$ret .= '<ul id="languageselector"><li><a href="'.$translate[$lang]['url'].'" title="'.$txt.'">'.$translate[$lang]['title'].'</a></li></ul></li>';
+		$ret .= '<ul id="languageselector"><li><a href="'.$url.'" title="'.$txt.'">'.$title.'</a></li></ul></li>';
 	} else {
 		$ret .= '<li><a class="flag-'.$lang.'" href="'.$mainAltURL.'" title="'.$generaltxt.'">'.$mainAltLang.'</a></li>';
 	}
