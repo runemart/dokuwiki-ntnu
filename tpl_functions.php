@@ -25,8 +25,9 @@ function tpl_sidebar($side='menu') {
 
 	if ($side=='menu'){
 		$main = tpl_getConf('global_menu_pagename');
-		if(tpl_pagelang($ID) == 'en')
-			$main = 'english:'.tpl_getConf('global_menu_pagename');
+		$engmain = 'english:'.tpl_getConf('global_menu_pagename');
+		if(tpl_pagelang($ID) == 'en' && file_exists(wikiFN($engmain)))
+			$main = $engmain;
 
 		$end = false;
 		$local = $ID.':'.tpl_getConf('namespace_menu_pagename');
