@@ -318,7 +318,7 @@ body.en #ntnufooter ul {
 #ntnufooter li.rss {background-image: url(icons/feed.png)}
 #ntnufooter li.blog {background-image: url(icons/balloon.png)}
 #ntnufooter li.twitter {background-image: url(icons/balloon-twitter.png)}
-
+#ntnufooter li.admission {background-image: url(icons/envelope.png)}
 
 /* General NTNU and Innsida color classes */
 
