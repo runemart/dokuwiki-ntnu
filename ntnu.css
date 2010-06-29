@@ -289,8 +289,7 @@ body.en #ntnufooter ul {
 	line-height: 2;
 	color: __text_alt__;
 	padding-left: 20px;
-	background-repeat: no-repeat;
-	background-position: 0 50%;
+	background: url(icons/sprite.png) 0 50% no-repeat;
 }
 
 #ntnufooter ul:first-child, body.en #ntnufooter ul:first-child {
@@ -301,24 +300,29 @@ body.en #ntnufooter ul {
 	text-decoration: none;
 }
 
-#ntnufooter li.kart {background-image: url(icons/map.png)}
-#ntnufooter li.emner {background-image: url(icons/books.png)}
-#ntnufooter li.ledelsen {background-image: url(icons/building.png)}
-#ntnufooter li.personsok {background-image: url(icons/cards-address.png)}
-#ntnufooter li.nettstedkart {background-image: url(icons/sitemap.png)}
-#ntnufooter li.forskning {background-image: url(icons/flask.png)}
-#ntnufooter li.enheter {background-image: url(icons/home.png)}
-#ntnufooter li.redaktor {background-image: url(icons/stamp.png)}
-#ntnufooter li.kontakt {background-image: url(icons/address-book.png)}
-#ntnufooter li.fakulteter {background-image: url(icons/bank.png)}
-#ntnufooter li.adm {background-image: url(icons/building-low.png)}
-#ntnufooter li.studier {background-image: url(icons/document--pencil.png)}
-#ntnufooter li.sentralbord {background-image: url(icons/telephone.png)}
-#ntnufooter li.orgnr {background-image: url(icons/counter.png)}
-#ntnufooter li.rss {background-image: url(icons/feed.png)}
-#ntnufooter li.blog {background-image: url(icons/balloon.png)}
-#ntnufooter li.twitter {background-image: url(icons/balloon-twitter.png)}
-#ntnufooter li.admission {background-image: url(icons/envelope.png)}
+#ntnufooter a, #ntnufooter span {
+	background: __background__;
+	display: block;
+}
+
+#ntnufooter li.kart {background-position: -350px 50%}
+#ntnufooter li.emner {background-position: -700px 50%}
+#ntnufooter li.ledelsen {background-position: -250px 50%}
+#ntnufooter li.personsok {background-position: -450px 50%}
+#ntnufooter li.nettstedkart {background-position: -600px 50%}
+#ntnufooter li.forskning {background-position: -750px 50%}
+#ntnufooter li.enheter {background-position: -800px 50%}
+#ntnufooter li.redaktor {background-position: -400px 50%}
+#ntnufooter li.kontakt {background-position: 0 50%}
+#ntnufooter li.fakulteter {background-position: -300px 50%}
+#ntnufooter li.adm {background-position: -200px 50%}
+#ntnufooter li.studier {background-position: -650px 50%}
+#ntnufooter li.sentralbord {background-position: -500px 50%}
+#ntnufooter li.orgnr {background-position: -550px 50%}
+#ntnufooter li.rss {background-position: -150px 50%}
+#ntnufooter li.blog {background-position: -50px 50%}
+#ntnufooter li.twitter {background-position: -100px 50%}
+#ntnufooter li.admission {background-position: -850px 50%}
 
 /* General NTNU and Innsida color classes */
 

@@ -2,8 +2,8 @@
 	<li class="kontakt"><a href="http://ntnu.no/kontakt">Kontakt oss</a></li>
 	<li class="personsok"><a href="http://ntnu.no/ansatte">Søk etter ansatte</a></li>
 	<li class="personsok"><a href="http://ntnu.no/studentsok">Søk etter studenter</a></li>
-	<li class="sentralbord">Sentralbord: 73 59 50 00</li>
-	<li class="orgnr">Org. nr.: 974767880</li>
+	<li class="sentralbord"><span>Sentralbord: 73 59 50 00</span></li>
+	<li class="orgnr"><span>Org. nr.: 974767880</span></li>
 </ul>
 
 <ul>

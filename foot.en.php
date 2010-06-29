@@ -1,7 +1,7 @@
 <ul>
 	<li class="personsok"><a href="http://www.ntnu.edu/employees">Search for employees</a></li>
 	<li class="kontakt"><a href="http://www.ntnu.edu/contact">Contact us</a></li>
-	<li class="sentralbord">Switchboard: +47 73 59 50 00</li>
+	<li class="sentralbord"><span>Switchboard: +47 73 59 50 00</span></li>
 </ul>
 
 <ul>
