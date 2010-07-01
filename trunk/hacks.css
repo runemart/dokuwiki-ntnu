@@ -17,8 +17,3 @@ body.en #ntnumenu li a {
 	*padding-left: 2.4em;
 	*padding-right: 2.4em;
 }
-
-
-#bluebar h1 a {
-	*background-image: url(not-really-an-image.gif);
-}
