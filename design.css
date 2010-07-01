@@ -431,9 +431,10 @@ div.dokuwiki p {
 }
 
 /* special headlines */
-.page h1, .page h2, .page h3 {
+.page h1 {
 	font-family: Georgia, Times New Roman, Times, Serif;
 }
+
 .page h1 {font-size: 2.5em; font-weight: normal; line-height: 1.2em; margin-bottom: .6em;}
 .page h2 {font-size: 1.5em; font-weight: normal; line-height: 2em;}
 .page h3 {font-size: 1.3em; font-weight: normal; line-height: 2.3em;}
