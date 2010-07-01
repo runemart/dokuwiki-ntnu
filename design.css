@@ -18,10 +18,6 @@ body {
 	background: url(images/logo.header.no.jpg) 50% 30px no-repeat;
 }
 
-body.en {
-	background: url(images/logo.header.en.jpg) 50% 30px no-repeat;
-}
-
 /* the document */
 #pagewrapper, #pagewrapperwide {
 	border: 1px solid __border_dark__;
