@@ -10,7 +10,7 @@
 /* ---------------	bottom bar ---------------- */
 div.dokuwiki .bar {
 	clear: both;
-	margin: 1.5em auto 1.5em auto;
+	margin: 1.5em auto;
 	width: __page_width__;
 }
 
