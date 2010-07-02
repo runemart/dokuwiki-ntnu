@@ -381,3 +381,37 @@ body.en #ntnufooter ul {
 	text-decoration: none !important;
 	outline: none;
 }
+
+#credits {
+	width: __page_width__;
+	margin: 0 auto;
+	margin-top: 3em;
+	padding: .4em 0;
+	//border-top: 1px dotted __border_light__;
+	background: #eee;
+}
+
+#credits ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+	display: table;
+	width: 100%;
+}
+
+#credits li {
+	font-size: .9em;
+	display: table-cell;
+	padding: 0 1.5em;
+	*display: inline;
+	border-right: 1px dotted __border_light__;
+}
+
+#credits li:last-child, #credits li.last {
+	border: none;
+}
+
+#credits li, #credits li a {
+	color: __text_alt__;
+}
