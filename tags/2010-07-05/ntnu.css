@@ -1,0 +1,417 @@
+/* Top bar (bluebar which really is black) */
+
+#bluebar {
+	width: 100%;
+	min-width: __body_width__;
+	background-color: __text__;
+	border-top: 4px solid __ntnublue__;
+}
+
+#bluebar .marginwrapper {
+	margin: 0 auto;
+	width: __page_width__;
+}
+
+#bluebar h1 {
+	float: left;
+	margin: 0;
+	font-size: 1.2em;
+	line-height: 1.1;
+	letter-spacing: 1px;
+	font-variant: small-caps;
+	padding: .333em 0;
+}
+
+#bluebar h1 a {
+	display: block;
+	position: absolute;
+	height: 9em;
+	background: url(images/logo.header.no.png) 0 3.5em no-repeat;
+}
+
+body.en #bluebar h1 a {
+	background: url(images/logo.header.en.png) 0 3.7em no-repeat;
+}
+
+#bluebar a {
+	text-decoration: none;
+	color: __background__ !important;
+}
+
+#ntnulenker {
+	float: right;
+	margin: 0;
+	list-style: none;
+}
+
+#ntnulenker li {
+	float: left;
+	color: __ntnublue__;
+	position: relative;
+}
+
+#ntnulenker li a {
+	padding: .4em 1em;
+	display: block;
+}
+
+/*
+#ntnulenker a.flag-no,
+#ntnulenker a.flag-en {
+	padding-left: 3em;
+	background-position: 1em 50%;
+	background-repeat: no-repeat;
+}
+#ntnulenker a.flag-no {background-image: url(icons/no.png)}
+#ntnulenker a.flag-en {background-image: url(icons/gb.png)}
+*/
+
+/* Language selector */
+
+#ntnulenker li.selector {
+	background: url(images/droparrow-soft.gif) 100% 50% no-repeat;
+	padding-right: 18px;
+}
+
+#ntnulenker li.selector:hover {
+	background: black url(images/droparrow.gif) 100% 50% no-repeat;
+}
+
+#ntnulenker li.selector a {
+	padding-right: 0;
+}
+
+#languageselector {
+	display: none;
+	position: absolute;
+	list-style: none;
+	margin: 0;
+	width: 100%;
+	padding-right: .4em;
+	padding-top: 1px;
+	background: __text__ url(images/dottedborder.png) 0 0 repeat-x;
+}
+
+#ntnulenker li:hover #languageselector {
+	display: block;
+}
+
+#languageselector li  {
+	width: 100%;
+}
+
+#ntnulenker #languageselector li a {
+	display: block;
+	background: __text__;
+	padding: .5em .6em .5em 1em;
+}
+
+
+/* Main tab menu */
+
+#ntnumenuwrap {
+	width: __page_width__;
+	margin: 0 auto;
+	margin-top: 2.3em;
+	border-style: solid;
+	border-color: __border_dark__;
+	border-width: 1px 1px 0 1px;
+	-moz-box-shadow: 0 .25em .5em -.15em __border_dark__;
+	background: __border_light__ url(images/menu-gradient.png) 0 0 repeat-x;
+	text-align: center;
+}
+
+#ntnumenu {
+	margin: 0;
+	width: 100%;
+	list-style: none;
+	background: url(images/blueline.png) 0 100% repeat-x;
+	display: table;
+}
+
+#ntnumenu li {
+	padding-bottom: 1px;
+	display: table-cell;
+}
+
+#ntnumenu li a {
+	padding: .4em 1em;
+	text-decoration: none;
+	font-weight: bold;
+	display: block;
+	border-right: 1px solid __border_dark__;
+}
+
+/* The selected tab of the NTNU menu */
+#ntnumenu.selectedtab_start 		li#tab_start,
+#ntnumenu.selectedtab_studier	 	li#tab_studier,
+#ntnumenu.selectedtab_student 	li#tab_student,
+#ntnumenu.selectedtab_evu 			li#tab_evu,
+#ntnumenu.selectedtab_forskning 	li#tab_forskning,
+#ntnumenu.selectedtab_non 			li#tab_non,
+#ntnumenu.selectedtab_om 			li#tab_om,
+#ntnumenu.selectedtab_aktuelt	 	li#tab_aktuelt,
+#ntnumenu.selectedtab_home 		li#tab_home,
+#ntnumenu.selectedtab_studies 	li#tab_studies,
+#ntnumenu.selectedtab_living 		li#tab_living,
+#ntnumenu.selectedtab_research 	li#tab_research,
+#ntnumenu.selectedtab_bai 			li#tab_bai,
+#ntnumenu.selectedtab_about 		li#tab_about,
+#ntnumenu.selectedtab_contact 	li#tab_contact{
+	margin-left: -1px;
+	margin-right: -1px;
+	border-style: solid;
+	margin-top: -4px;
+	border-width: 4px 1px 0 1px;
+	border-color: __ntnublue__;
+	display: block;
+}
+
+#ntnumenu.selectedtab_start 		li#tab_start a,
+#ntnumenu.selectedtab_studier 		li#tab_studier a,
+#ntnumenu.selectedtab_student 	li#tab_student a,
+#ntnumenu.selectedtab_evu 			li#tab_evu a,
+#ntnumenu.selectedtab_forskning 	li#tab_forskning a,
+#ntnumenu.selectedtab_non 			li#tab_non a,
+#ntnumenu.selectedtab_om 			li#tab_om a,
+#ntnumenu.selectedtab_aktuelt 	li#tab_aktuelt a,
+#ntnumenu.selectedtab_home 		li#tab_home a,
+#ntnumenu.selectedtab_studies 	li#tab_studies a,
+#ntnumenu.selectedtab_living 		li#tab_living a,
+#ntnumenu.selectedtab_research 	li#tab_research a,
+#ntnumenu.selectedtab_bai 			li#tab_bai a,
+#ntnumenu.selectedtab_about 		li#tab_about a,
+#ntnumenu.selectedtab_contact 	li#tab_contact a {
+	color: __text__;
+	background: __background__;
+	border: 0;
+	padding-bottom: .6em;
+	margin-bottom: -.2em;
+}
+
+#content {
+	margin-bottom: 1.5em;
+}
+
+/* Search form */
+
+#searchform {
+	width: __page_width__;
+	margin: 0 auto;
+	text-align: right;
+	margin-top: 4.4em;
+}
+
+#searchform fieldset {
+	background: __background__;
+	border: 1px solid __border_dark__;
+	width: 100%;
+	padding: 1px;
+	bottom: 0;
+	width: auto;
+	display: inline;
+	*padding: 0 1px 1px 1px;
+	margin-right: -1px;
+}
+
+#searchform.focus fieldset {
+	border-color: __text__;
+}
+
+#searchform #query,
+#searchform #sok {
+	font: 1.1em Arial, Helvetica, Sans-serif !important;
+	vertical-align: middle;
+}
+
+#searchform #query {
+	color: __text_alt__;
+	border: 1px solid __background__;
+	border-right: 0;
+	padding: 5px;
+	width: 15em;
+	background: transparent url(icons/search_off.png) 5px 50% no-repeat;
+	padding-left: 27px;
+}
+
+#searchform.focus #query {
+	color: __text__;
+	background: transparent url(icons/search_on.png) 5px 50% no-repeat;
+}
+
+#searchform #sok {
+	background: __border_light__ url(images/menu-gradient.png) 0 0 repeat-x;
+	border-top: 1px solid __border_light__;
+	border-right: 1px solid __border_dark__;
+	border-bottom: 1px solid __border_dark__;
+	border-left: 1px solid __border_light__;
+	font-weight: bold !important;
+	line-height: 1.5em !important;
+	padding: 5px 12px;
+	*padding: 1px 3px;
+	text-shadow: 0 1px 0 #fff;
+}
+
+#searchform.focus #sok {
+	border-top: 1px solid #999;
+	border-right: 1px solid #666;
+	border-bottom: 1px solid #666;
+	border-left: 1px solid #999;
+}
+
+#searchform #sok::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+/* Footer */
+
+#address {
+	text-align: center;
+	color: __text_alt__;
+	padding: .75em;
+}
+
+#ntnufooter {
+	width: __page_width__;
+	margin: 0 auto;
+	background: url(images/logo.footer.no.png) 1.5em 2em no-repeat;
+	padding-top: 1.5em;
+}
+
+#ntnufooter ul {
+	float: left;
+	width: auto;
+	clear: none;
+	list-style: none;
+	margin: 0 0 0 5.5em;
+}
+
+body.en #ntnufooter ul {
+	margin: 0 0 0 4em;
+}
+
+#ntnufooter ul li {
+	line-height: 2;
+	color: __text_alt__;
+	padding-left: 20px;
+	background: url(icons/sprite.png) 0 50% no-repeat;
+}
+
+#ntnufooter ul:first-child, body.en #ntnufooter ul:first-child {
+	margin-left: 20em;
+}
+
+#ntnufooter a {
+	text-decoration: none;
+}
+
+#ntnufooter a, #ntnufooter span {
+	background: __background__;
+	display: block;
+}
+
+#ntnufooter li.kart {background-position: -350px 50%}
+#ntnufooter li.emner {background-position: -700px 50%}
+#ntnufooter li.ledelsen {background-position: -250px 50%}
+#ntnufooter li.personsok {background-position: -450px 50%}
+#ntnufooter li.nettstedkart {background-position: -600px 50%}
+#ntnufooter li.forskning {background-position: -750px 50%}
+#ntnufooter li.enheter {background-position: -800px 50%}
+#ntnufooter li.redaktor {background-position: -400px 50%}
+#ntnufooter li.kontakt {background-position: 0 50%}
+#ntnufooter li.fakulteter {background-position: -300px 50%}
+#ntnufooter li.adm {background-position: -200px 50%}
+#ntnufooter li.studier {background-position: -650px 50%}
+#ntnufooter li.sentralbord {background-position: -500px 50%}
+#ntnufooter li.orgnr {background-position: -550px 50%}
+#ntnufooter li.rss {background-position: -150px 50%}
+#ntnufooter li.blog {background-position: -50px 50%}
+#ntnufooter li.twitter {background-position: -100px 50%}
+#ntnufooter li.admission {background-position: -850px 50%}
+
+/* General NTNU and Innsida color classes */
+
+.ntnu1 {background-color: __ntnu1__;}
+.ntnu2 {background-color: __ntnu2__;}
+.ntnu3 {background-color: __ntnu3__;}
+.innsida1 {background-color: __innsida1__;}
+.innsida2 {background-color: __innsida2__;}
+.innsida3 {background-color: __innsida3__;}
+
+/* Utilities */
+
+.printOnly,
+.hidden {
+	display: none;
+}
+
+.offscreen {
+	position: absolute;
+	height: 1px;
+	width: 1px;
+	left: -10000em;
+	top: auto;
+	overflow: hidden;
+}
+
+.clearer {
+	clear: both;
+	height: 0;
+	width: 100%;
+	border: none;
+	font-size: 1px;
+	line-height: 0;
+}
+
+#bluebar a:focus,
+#ntnumenu li a:focus,
+#breadcrumbs a:focus,
+#menu a:focus,
+#ntnufooter a:focus {
+	text-decoration: underline !important;
+	outline: none;
+}
+
+#bluebar a:hover, #bluebar a:active,
+#ntnumenu li a:hover, #ntnumenu li a:active,
+#breadcrumbs a:hover, #breadcrumbs a:active,
+#menu a:hover, #menu a:active,
+#ntnufooter a:hover, #ntnufooter a:active {
+	text-decoration: none !important;
+	outline: none;
+}
+
+#credits {
+	width: __page_width__;
+	margin: 0 auto;
+	margin-top: 3em;
+	padding: .4em 0;
+	//border-top: 1px dotted __border_light__;
+	background: #eee;
+}
+
+#credits ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+	display: table;
+	width: 100%;
+}
+
+#credits li {
+	font-size: .9em;
+	display: table-cell;
+	padding: 0 1.5em;
+	*display: inline;
+	border-right: 1px dotted __border_light__;
+}
+
+#credits li:last-child, #credits li.last {
+	border: none;
+}
+
+#credits li, #credits li a {
+	color: __text_alt__;
+}
