@@ -148,7 +148,7 @@ checkTemplateUpdates();
 			<div id="credits">
 				<ul>
 					<li>Powered by <a href="http://www.dokuwiki.org">DokuWiki</a> + <a href="http://code.google.com/p/dokuwiki-ntnu">NTNU template</a> and <a href="http://jquery.com/">jQuery</a></li>
-					<?php if (file_exists(DOKU_PLUGIN.'googleanalytics/code.php')){ ?>
+					<?php if (file_exists(DOKU_PLUGIN.'googleanalytics/action.php')){ ?>
 						<li>Web statistics by <a href="http://www.google.com/analytics/">Google Analytics</a></li>
 					<?php } ?>
 					<li>"Fugue" icon set by <a href="http://yusukekamiyamane.com/">Yusuke Kamiyamane</a>, <a href="http://creativecommons.org/licenses/by/3.0/">CC-BY 3.0</a></li>
@@ -190,13 +190,6 @@ checkTemplateUpdates();
 		<!-- dokuwiki end -->
 
 		<!-- scripts placed at bottom of page to speed things up -->
-		<!-- google analytics start -->
-		<?php
-			if (file_exists(DOKU_PLUGIN.'googleanalytics/code.php')) include_once(DOKU_PLUGIN.'googleanalytics/code.php');
-			if (function_exists('ga_google_analytics_code')) ga_google_analytics_code();
-		?>
-		<!-- google analytics end -->
-
 		<script type="text/javascript">
 			// Ready-function loads when document is fully loaded
 			jQuery(document).ready(function(){
