@@ -383,7 +383,7 @@ function checkTemplateUpdates(){
 
 	// Filters relevant data from file
 	$matches = array();
-	$pattern = "/<li.*?>.*?\[(.+?)\].*?(.+?)<\/li>/";
+	$pattern = "/<li.*?>.*?<strong>\[(.+?)\]<\/strong>(.+?)<\/li>/";
 	preg_match_all($pattern, $data, $matches);
 
 	// Home made array_combine() for those running on older PHP versions
@@ -391,7 +391,6 @@ function checkTemplateUpdates(){
 	if(sizeof($matches[1]) == sizeof($matches[2]))
 		for($i=0 ; $i<sizeof($matches[1]) ; $i++)
 			$data[$matches[1][$i]] = $matches[2][$i];
-
 
 	// prepares a list of messages
 	$msgs = array();
