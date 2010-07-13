@@ -279,6 +279,10 @@ body.en #bluebar h1 a {
 	padding-top: 1.5em;
 }
 
+body.en #ntnufooter {
+	background: url(images/logo.footer.en.png) 1.5em 2em no-repeat;
+}
+
 #ntnufooter ul {
 	float: left;
 	width: auto;
