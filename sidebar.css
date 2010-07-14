@@ -17,11 +17,6 @@
 	padding: 0;
 }
 
-#sidebar dt {
-	font-weight: normal;
-	text-decoration: underline;
-}
-
 #sidebar dd {
 	margin-left: 1.5em;
 }
