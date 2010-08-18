@@ -296,6 +296,7 @@ div.dokuwiki a.windows {
 
 /* interwiki link (icon are set by dokuwiki) */
 div.dokuwiki a.interwiki {
+	padding-left: 18px;
 }
 
 /* link to some embedded media */
