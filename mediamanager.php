@@ -13,7 +13,7 @@
  * You should leave the doctype at the very top - It should
  * always be the very first line of a document.
  *
- * @link   http://wiki.splitbrain.org/wiki:tpl:templates
+ * @link   http://dokuwiki.org/templates
  * @author Andreas Gohr <andi@splitbrain.org>
  */
 ?>
@@ -28,7 +28,7 @@
   <link rel="shortcut icon" href="<?php echo DOKU_TPL?>images/favicon.ico" />
 </head>
 
-<body style="margin: 0; width: 100%">
+<body>
 <div id="media__manager" class="dokuwiki">
     <div id="media__left">
         <?php html_msgarea()?>
