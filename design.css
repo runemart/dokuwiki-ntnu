@@ -9,13 +9,13 @@
 
 /* -------------- general elements --------------- */
 
-* { padding: 0; margin: 0; }
-
 body {
 	font: 75%/1.5 Arial, "Lucida Grande", Verdana, Lucida, Helvetica, sans-serif;
 	background-color: __background__;
 	color: __text__;
 	background: url(images/logo.header.no.jpg) 50% 30px no-repeat;
+	margin: 0;
+	padding: 0;
 }
 
 /* the document */
@@ -421,6 +421,7 @@ h1, h2, h3, h4, h5 {
 		background-color: inherit;
 		font-weight: normal;
 		clear: left;
+		margin: 0;
 }
 
 div.dokuwiki h1 {
@@ -458,6 +459,7 @@ div.dokuwiki ul {
 	list-style-image: none;
 	margin: 0 0 1.5em 2em;
 	color: __text_other__;
+	padding: 0;
 }
 
 div.dokuwiki ul.rss_detailed {

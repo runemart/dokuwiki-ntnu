@@ -86,6 +86,7 @@ body.en #bluebar h1 a {
 	position: absolute;
 	list-style: none;
 	margin: 0;
+	padding: 0;
 	width: 100%;
 	padding-right: .4em;
 	padding-top: 1px;
@@ -123,6 +124,7 @@ body.en #bluebar h1 a {
 
 #ntnumenu {
 	margin: 0;
+	padding: 0;
 	width: 100%;
 	list-style: none;
 	background: url(images/blueline.png) 0 100% repeat-x;
@@ -289,6 +291,7 @@ body.en #ntnufooter {
 	clear: none;
 	list-style: none;
 	margin: 0 0 0 5.5em;
+	padding: 0;
 }
 
 body.en #ntnufooter ul {
@@ -351,12 +354,12 @@ body.en #ntnufooter ul {
 }
 
 .offscreen {
-	position: absolute;
+	position: absolute !important;
 	height: 1px;
 	width: 1px;
-	left: -10000em;
+	left: -10000em !important;
 	top: auto;
-	overflow: hidden;
+	overflow: hidden !important;
 }
 
 .clearer {
