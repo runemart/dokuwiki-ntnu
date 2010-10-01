@@ -13,7 +13,7 @@
 <ul>
 	<li class="studier"><a href="http://www.ntnu.edu/studies/allstudies">Studies A to Z</a></li>
 	<li class="emner"><a href="http://www.ntnu.edu/studies/courses">Courses A to Z</a></li>
-	<li class="forskning"><a href="http://www.ntnu.edu/research-entities-a-z">Research A to Z</a></li>
+	<li class="forskning"><a href="http://www.ntnu.edu/research/a-z">Research A to Z</a></li>
 </ul>
 
 <ul>
