@@ -456,8 +456,9 @@ body.en #ntnufooter ul {
 	height: 0;
 	width: 100%;
 	border: none;
-	font-size: 1px;
+	font-size: 0px;
 	line-height: 0;
+	background: __background__;
 }
 
 #bluebar a:focus,
