@@ -224,6 +224,7 @@ body.en #bluebar #mainpagelink a {
 #searchform #sok {
 	font: 1.1em Arial, Helvetica, Sans-serif !important;
 	vertical-align: middle;
+	margin: 0;
 }
 
 #searchform #query {
@@ -248,7 +249,6 @@ body.en #bluebar #mainpagelink a {
 	border-bottom: 1px solid __border_dark__;
 	border-left: 1px solid __border_light__;
 	font-weight: bold !important;
-	line-height: 1.5em !important;
 	padding: 5px 12px;
 	*padding: 1px 3px;
 	text-shadow: 0 1px 0 #fff;
