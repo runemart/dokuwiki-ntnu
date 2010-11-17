@@ -68,6 +68,8 @@ checkTemplateUpdates();
 			</div>
 			<!-- header end -->
 
+		<hr class="offscreen" />
+
 		<div class="marginwrapper">
 			<!-- pagewrapper start -->
 			<div id="<?php echo (tpl_hasSidebar() && $ACT == 'show') ? "pagewrapper" : "pagewrapperwide";?>">
@@ -79,8 +81,6 @@ checkTemplateUpdates();
 					</div>
 				</div>
 				<!-- breadcrumbs end -->
-
-				<hr class="offscreen" />
 
 				<!-- dynamic 2/3 columns start -->
 				<div class="columns-float">
@@ -139,6 +139,8 @@ checkTemplateUpdates();
 				<!-- footer end -->
 			</div>
 			<!-- pagewrapper end -->
+
+			<hr class="offscreen" />
 
 			<!-- below footer start -->
 			<div id="ntnufooter">
