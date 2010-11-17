@@ -12,25 +12,21 @@
 	width: __page_width__;
 }
 
-#bluebar h1 {
+#bluebar #mainpagelink {
 	float: left;
-	margin: 0;
-	font-size: 1.2em;
-	line-height: 1.1;
 	letter-spacing: 1px;
-	font-variant: small-caps;
-	padding: .333em 0;
+	padding: .3em 0;
 }
 
-#bluebar h1 a {
+#bluebar #mainpagelink a {
 	display: block;
 	position: absolute;
-	height: 9em;
-	background: url(images/logo.header.no.png) 0 3.5em no-repeat;
+	height: 10em;
+	background: url(images/logo.header.no.png) 0 4.2em no-repeat;
 }
 
-body.en #bluebar h1 a {
-	background: url(images/logo.header.en.png) 0 3.7em no-repeat;
+body.en #bluebar #mainpagelink a {
+	background-image: url(images/logo.header.en.png);
 }
 
 #bluebar a {
@@ -51,8 +47,12 @@ body.en #bluebar h1 a {
 }
 
 #ntnulenker li a {
-	padding: .4em 1em;
+	padding: .3em 1em;
 	display: block;
+}
+
+#ntnulenker li.last a {
+	padding-right: 2px;
 }
 
 /*
@@ -113,7 +113,7 @@ body.en #bluebar h1 a {
 #ntnumenuwrap {
 	width: __page_width__;
 	margin: 0 auto;
-	margin-top: 2.3em;
+	margin-top: 2.4em;
 	border-style: solid;
 	border-color: __border_dark__;
 	border-width: 1px 1px 0 1px;
@@ -201,7 +201,7 @@ body.en #bluebar h1 a {
 	width: __page_width__;
 	margin: 0 auto;
 	text-align: right;
-	margin-top: 4.4em;
+	margin-top: 4.6em;
 }
 
 #searchform fieldset {
