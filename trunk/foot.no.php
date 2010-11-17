@@ -7,7 +7,7 @@
 </ul>
 
 <ul>
-	<li class="kart"><a href="http://ntnu.no/ntnukart">Kart over NTNU</a></li>
+	<li class="kart"><a href="http://ntnu.no/kart">Kart over NTNU</a></li>
 	<li class="fakulteter"><a href="http://ntnu.no/fakulteter">Fakulteter og institutter</a></li>
 	<li class="adm"><a href="http://ntnu.no/adm">Administrative enheter</a></li>
 	<li class="ledelsen"><a href="http://ntnu.no/rektor">Ledelsen</a></li>
@@ -25,5 +25,5 @@
 <ul>
 	<li class="blog"><a href="http://ntnu.no/aktuelt/blogger">Blogger</a></li>
 	<li class="twitter"><a href="http://twitter.com/NTNU">Twitter</a></li>
-	<li class="rss"><a href="http://ntnu.no/aktuelt/rss">RSS-feed</a></li>
+	<li class="rss"><a href="http://ntnu.no/aktuelt/blogger">RSS-feed</a></li>
 </ul>
