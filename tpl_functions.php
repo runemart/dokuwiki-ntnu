@@ -312,14 +312,14 @@ function tpl_languageSelector($lang = 'no'){
 	switch($lang){
 		// Norwegian selector
 		case 'no':
-			$mainAltLang = 'NTNU.no (Norsk)';
+			$mainAltLang = 'NTNU Norsk';
 			$mainAltURL = 'http://ntnu.no';
 			$txt = 'Oversett gjeldende side til norsk';
 			$generaltxt = 'Norsk versjon av nettstedet';
 			break;
 		// English selector
 		case 'en':
-			$mainAltLang = 'NTNU.edu (English)';
+			$mainAltLang = 'NTNU English';
 			$mainAltURL = 'http://www.ntnu.edu';
 			$txt = 'Translate current page to English';
 			$generaltxt = 'English version of the website';
