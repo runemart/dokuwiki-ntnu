@@ -9,11 +9,15 @@
 
 /* -------------- general elements --------------- */
 
-body {
+html {
 	font: 75%/1.5 Arial, "Lucida Grande", Verdana, Lucida, Helvetica, sans-serif;
+}
+
+body {
+	font-size: 1em;
 	background-color: __background__;
 	color: __text__;
-	background: url(images/logo.header.no.jpg) 50% 30px no-repeat;
+	background: url(images/logo.header.no.jpg) 50% 2em no-repeat;
 	margin: 0;
 	padding: 0;
 }
