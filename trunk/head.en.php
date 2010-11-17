@@ -32,13 +32,13 @@
 			<h2 id="globalnav">NTNU navigation</h2>
 		</div>
 		<ul id="ntnumenu" title="NTNU navigation" class="selectedtab_<?php echo tpl_getConf('selectedtab'); ?>">
-			<li id="tab_start"><a href="http://www.ntnu.edu" title="Home page for NTNU">Home</a></li>
+			<li id="tab_start" class="first"><a href="http://www.ntnu.edu" title="Home page for NTNU">Home</a></li>
 			<li id="tab_studier"><a href="http://www.ntnu.edu/studies" title="Studies at NTNU">Studies</a></li>
 			<li id="tab_student"><a href="http://www.ntnu.edu/livingintrh" title="Living in Trondheim">Living in Trondheim</a></li>
 			<li id="tab_forskning"><a href="http://www.ntnu.edu/research" title="Research at NTNU">Research</a></li>
 			<li id="tab_non"><a href="http://www.ntnu.edu/business" title="Business and innovation">Business and innovation</a></li>
 			<li id="tab_om" class="selected"><a href="http://www.ntnu.edu/aboutntnu" title="About NTNU">About NTNU</a></li>
-			<li id="tab_aktuelt"><a style="border-right: none" href="http://www.ntnu.edu/contact" title="Contact us">Contact us</a></li>
+			<li id="tab_aktuelt" class="last"><a href="http://www.ntnu.edu/contact" title="Contact us">Contact us</a></li>
 		</ul>
 		<div class="clearer"></div>
 	</div>
