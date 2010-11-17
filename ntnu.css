@@ -116,7 +116,7 @@ body.en #bluebar #mainpagelink a {
 	margin-top: 2.4em;
 	border-style: solid;
 	border-color: __border_dark__;
-	border-width: 1px 1px 0 1px;
+	border-width: 1px 1px 0;
 	-moz-box-shadow: 0 .25em .5em -.15em __border_dark__;
 	background: __border_light__ url(images/menu-gradient.png) 0 0 repeat-x;
 	text-align: center;
@@ -129,19 +129,13 @@ body.en #bluebar #mainpagelink a {
 	list-style: none;
 	background: url(images/blueline.png) 0 100% repeat-x;
 	display: table;
+	*float: left;
 }
 
 #ntnumenu li {
 	padding-bottom: 1px;
 	display: table-cell;
-}
-
-#ntnumenu li a {
-	padding: .4em 1em;
-	text-decoration: none;
-	font-weight: bold;
-	display: block;
-	border-right: 1px solid __border_dark__;
+	*float:left;
 }
 
 /* The selected tab of the NTNU menu */
@@ -160,15 +154,72 @@ body.en #bluebar #mainpagelink a {
 #ntnumenu.selectedtab_bai 			li#tab_bai,
 #ntnumenu.selectedtab_about 		li#tab_about,
 #ntnumenu.selectedtab_contact 	li#tab_contact{
-	margin-left: -1px;
-	margin-right: -1px;
-	border-style: solid;
-	margin-top: -4px;
+	margin: -4px -1px 0;
+	border: 1px solid __ntnublue__;
 	border-width: 4px 1px 0 1px;
-	border-color: __ntnublue__;
 	display: block;
+	padding-bottom: 0;
 }
 
+/* First tab - selected */
+#ntnumenu.selectedtab_start 		li#tab_start.first,
+#ntnumenu.selectedtab_studier	 	li#tab_studier.first,
+#ntnumenu.selectedtab_student 	li#tab_student.first,
+#ntnumenu.selectedtab_evu 			li#tab_evu.first,
+#ntnumenu.selectedtab_forskning 	li#tab_forskning.first,
+#ntnumenu.selectedtab_non 			li#tab_non.first,
+#ntnumenu.selectedtab_om 			li#tab_om.first,
+#ntnumenu.selectedtab_aktuelt	 	li#tab_aktuelt.first,
+#ntnumenu.selectedtab_home 		li#tab_home.first,
+#ntnumenu.selectedtab_studies 	li#tab_studies.first,
+#ntnumenu.selectedtab_living 		li#tab_living.first,
+#ntnumenu.selectedtab_research 	li#tab_research.first,
+#ntnumenu.selectedtab_bai 			li#tab_bai.first,
+#ntnumenu.selectedtab_about 		li#tab_about.first,
+#ntnumenu.selectedtab_contact 	li#tab_contact.first {
+	border-left: none;
+}
+
+/* Last tab - selected */
+#ntnumenu.selectedtab_start 		li#tab_start.last,
+#ntnumenu.selectedtab_studier	 	li#tab_studier.last,
+#ntnumenu.selectedtab_student 	li#tab_student.last,
+#ntnumenu.selectedtab_evu 			li#tab_evu.last,
+#ntnumenu.selectedtab_forskning 	li#tab_forskning.last,
+#ntnumenu.selectedtab_non 			li#tab_non.last,
+#ntnumenu.selectedtab_om 			li#tab_om.last,
+#ntnumenu.selectedtab_aktuelt	 	li#tab_aktuelt.last,
+#ntnumenu.selectedtab_home 		li#tab_home.last,
+#ntnumenu.selectedtab_studies 	li#tab_studies.last,
+#ntnumenu.selectedtab_living 		li#tab_living.last,
+#ntnumenu.selectedtab_research 	li#tab_research.last,
+#ntnumenu.selectedtab_bai 			li#tab_bai.last,
+#ntnumenu.selectedtab_about 		li#tab_about.last,
+#ntnumenu.selectedtab_contact 	li#tab_contact.last {
+	border-right: none;
+	*border-right: 1px solid __ntnublue__;
+}
+
+#ntnumenu li a {
+	padding: .4em 1em;
+	text-decoration: none;
+	font-weight: bold;
+	display: block;
+	border-right: 1px solid __border_dark__;
+	*padding-left: 1.5em;
+	*padding-right: 1.5em;
+}
+
+body.en #ntnumenu li a {
+	*padding-left: 2.5em;
+	*padding-right: 2.5em;
+}
+
+#ntnumenu li.last a {
+	border-right: none;
+}
+
+/* Tab anchor */
 #ntnumenu.selectedtab_start 		li#tab_start a,
 #ntnumenu.selectedtab_studier 		li#tab_studier a,
 #ntnumenu.selectedtab_student 	li#tab_student a,
@@ -187,8 +238,46 @@ body.en #bluebar #mainpagelink a {
 	color: __text__;
 	background: __background__;
 	border: 0;
-	padding-bottom: .6em;
-	margin-bottom: -.2em;
+	border-bottom: 1px solid __background__;
+}
+
+/* First tab anchor - selected */
+#ntnumenu.selectedtab_start 		li#tab_start.first a,
+#ntnumenu.selectedtab_studier 		li#tab_studier.first a,
+#ntnumenu.selectedtab_student 	li#tab_student.first a,
+#ntnumenu.selectedtab_evu 			li#tab_evu.first a,
+#ntnumenu.selectedtab_forskning 	li#tab_forskning.first a,
+#ntnumenu.selectedtab_non 			li#tab_non.first a,
+#ntnumenu.selectedtab_om 			li#tab_om.first a,
+#ntnumenu.selectedtab_aktuelt 	li#tab_aktuelt.first a,
+#ntnumenu.selectedtab_home 		li#tab_home.first a,
+#ntnumenu.selectedtab_studies 	li#tab_studies.first a,
+#ntnumenu.selectedtab_living 		li#tab_living.first a,
+#ntnumenu.selectedtab_research 	li#tab_research.first a,
+#ntnumenu.selectedtab_bai 			li#tab_bai.first a,
+#ntnumenu.selectedtab_about 		li#tab_about.first a,
+#ntnumenu.selectedtab_contact 	li#tab_contact.first a {
+	border-left: 1px solid __border_dark__;
+}
+
+/* Last tab anchor - selected */
+#ntnumenu.selectedtab_start 		li#tab_start.last a,
+#ntnumenu.selectedtab_studier 		li#tab_studier.last a,
+#ntnumenu.selectedtab_student 	li#tab_student.last a,
+#ntnumenu.selectedtab_evu 			li#tab_evu.last a,
+#ntnumenu.selectedtab_forskning 	li#tab_forskning.last a,
+#ntnumenu.selectedtab_non 			li#tab_non.last a,
+#ntnumenu.selectedtab_om 			li#tab_om.last a,
+#ntnumenu.selectedtab_aktuelt 	li#tab_aktuelt.last a,
+#ntnumenu.selectedtab_home 		li#tab_home.last a,
+#ntnumenu.selectedtab_studies 	li#tab_studies.last a,
+#ntnumenu.selectedtab_living 		li#tab_living.last a,
+#ntnumenu.selectedtab_research 	li#tab_research.last a,
+#ntnumenu.selectedtab_bai 			li#tab_bai.last a,
+#ntnumenu.selectedtab_about 		li#tab_about.last a,
+#ntnumenu.selectedtab_contact 	li#tab_contact.last a {
+	border-right: 1px solid __border_dark__;
+	*border-right: none;
 }
 
 #content {

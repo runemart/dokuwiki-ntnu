@@ -28,14 +28,14 @@
 <div class="marginwrapper">
 	<div id="ntnumenuwrap">
 		<ul id="ntnumenu" title="NTNU-navigasjon" class="selectedtab_<?php echo tpl_getConf('selectedtab'); ?>">
-			<li id="tab_start"><a href="http://ntnu.no" title="Startside for NTNU">Startside</a></li>
+			<li id="tab_start" class="first"><a href="http://ntnu.no" title="Startside for NTNU">Startside</a></li>
 			<li id="tab_studier"><a href="http://ntnu.no/studier" title="Studier ved NTNU">Studier</a></li>
 			<li id="tab_student"><a href="http://ntnu.no/student" title="Student i Trondheim">Student i Trondheim</a></li>
 			<li id="tab_forskning"><a href="http://ntnu.no/forskning" title="Forskning ved NTNU">Forskning</a></li>
 			<li id="tab_evu"><a href="http://videre.ntnu.no/pages" title="Etter- og videreutdanning">Etter- og videreutdanning</a></li>
 			<li id="tab_non"><a href="http://ntnu.no/naringsliv" title="Næringsliv og nyskaping">N&aelig;ringsliv og nyskaping</a></li>
-			<li id="tab_om" class="selected"><a href="http://ntnu.no/om" title="Om NTNU">Om NTNU</a></li>
-			<li id="tab_aktuelt"><a style="border-right: none" href="http://ntnu.no/aktuelt" title="Aktuelt">Aktuelt</a></li>
+			<li id="tab_om"><a href="http://ntnu.no/om" title="Om NTNU">Om NTNU</a></li>
+			<li id="tab_aktuelt" class="last"><a href="http://ntnu.no/aktuelt" title="Aktuelt">Aktuelt</a></li>
 		</ul>
 		<div class="clearer"></div>
 	</div>
