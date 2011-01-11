@@ -466,6 +466,10 @@ div.dokuwiki ul {
 	padding: 0;
 }
 
+div.dokuwiki li ul {
+	margin-bottom: 0;
+}
+
 div.dokuwiki ul.rss_detailed {
 	margin: 0;
 	list-style: none;
@@ -497,13 +501,10 @@ div.dokuwiki ul.rss_detailed li span.date {
 /* ordered lists */
 div.dokuwiki ol {
 	list-style-image: none;
-	margin: 0 0 0.5em 1.5em;
+	margin: 0 0 1.5em 2em;
+	padding-left: 1em;
 	color: __text_alt__;
 	font-weight: bold;
-}
-
-div.dokuwiki ol li {
-	margin-top: 1em;
 }
 
 /* the list items overriding the ul/ol definition */
