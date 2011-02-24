@@ -39,7 +39,7 @@ checkTemplateUpdates();
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $pagelang?>"
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xml:lang="<?php echo $pagelang?>"
  lang="<?php echo $pagelang?>" dir="<?php echo $lang['direction']?>">
 	<head profile="http://example.org/xmdp/robots-profile#">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -53,6 +53,13 @@ checkTemplateUpdates();
 		<link rel="icon" href="<?php echo DOKU_TPL?>images/favicon.ico" type="image/ico" />
 		<link rel="shortcut icon" href="<?php echo DOKU_TPL?>images/favicon.ico" />
 		<link rel="apple-touch-icon" href="<?php echo DOKU_TPL?>images/apple-touch-icon.png" />
+		<link rel="img_src" href="<?php echo DOKU_TPL?>images/logo.square.<?= $pagelang ?>.png" />
+		<!-- Open Graph Protocol -->
+		<meta property="og:title" content="<?php tpl_pagetitle() ?>" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="<?= DOKU_URL ?>" />
+		<meta property="og:image" content="<?php echo DOKU_TPL?>images/logo.square.<?= $pagelang ?>.png" />
+		<meta property="og:site_name" content="<?= strip_tags($conf['title']) ?>" />
 	</head>
 	<body class="dwbody <?php echo $pagelang; ?>" id="pageid_<?php echo $ID; ?>">
 		<!-- dokuwiki start -->
