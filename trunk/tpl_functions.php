@@ -342,14 +342,43 @@ function tpl_languageSelector($lang = 'no'){
 		}
 		$title = ($title) ? $title : $ref;
 
-		$ret .= '<li class="selector"><a class="flag-'.$lang.'" href="'.$mainAltURL.'" title="'.$generaltxt.'">'.$mainAltLang.'</a>';
+		$ret .= '<li class="selector"><a href="'.$mainAltURL.'" title="'.$generaltxt.'">'.$mainAltLang.'</a>';
 		$ret .= '<ul id="languageselector"><li><a href="'.$url.'" title="'.$txt.'">'.$title.'</a></li></ul></li>';
 	} else {
-		$ret .= '<li><a class="flag-'.$lang.'" href="'.$mainAltURL.'" title="'.$generaltxt.'">'.$mainAltLang.'</a></li>';
+		$ret .= '<li><a href="'.$mainAltURL.'" title="'.$generaltxt.'">'.$mainAltLang.'</a></li>';
 	}
 	return $ret;
 }
 
+function tpl_languageFlag($pagelang = 'no'){
+	global $ID;
+	$ret = '<div class="flags">';
+	foreach(p_get_metadata($ID, 'translate') as $lang => $translate){
+		$title = $translate['title'];
+		$ref = $translate['ref'];
+
+		// Calculate URL and link title
+		if(stripos($ref, 'http') === FALSE){
+			// wikilink
+			if(!$title && file_exists(wikiFN($ref)))
+				$title = p_get_first_heading($ref);
+			$url = wl($ref);
+		} else {
+			// http link
+			$url = $ref;
+		}
+		$title = ($title) ? $title : $ref;
+
+		$ret .= '<span class="offscreen">';
+		if($pagelang == 'en')
+			$ret .= 'This page in other languages: ';
+		else
+			$ret .= 'Denne siden på andre språk: ';
+		$ret .= '</span><a class="flag-'.$lang.'" href="'.$url.'" title="'.$title.'"><span class="offscreen">'.$title.'</span></a>';
+	}
+	$ret .= '</div>';
+	return $ret;
+}
 
 
 /**

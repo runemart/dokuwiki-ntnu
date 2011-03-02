@@ -55,16 +55,21 @@ body.en #bluebar #mainpagelink a {
 	padding-right: 2px;
 }
 
-/*
-#ntnulenker a.flag-no,
-#ntnulenker a.flag-en {
-	padding-left: 3em;
-	background-position: 1em 50%;
-	background-repeat: no-repeat;
+.flags {
+	float: right;
+	overflow: auto;
+	padding: 0 !important;
 }
-#ntnulenker a.flag-no {background-image: url(icons/no.png)}
-#ntnulenker a.flag-en {background-image: url(icons/gb.png)}
-*/
+
+a.flag-no,
+a.flag-en {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	height: 1em;
+	padding-left: 24px;
+}
+a.flag-no {background-image: url(icons/no.png)}
+a.flag-en {background-image: url(icons/gb.png)}
 
 /* Language selector */
 
