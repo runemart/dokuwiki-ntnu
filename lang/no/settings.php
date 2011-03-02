@@ -44,4 +44,6 @@ $lang['selectedtab_o_aktuelt']		= 'Aktuelt';
 $lang['usetemplateupdates']					= 'Se etter oppdateringer?';
 $lang['templateupdates'] 						= 'Skjul oppdateringsmeldinger med ID-nr mindre eller lik:';
 
+$lang['languageflag']									= 'Bruk flaggikon i siden for å symbolisere/lenke til oversettelse?';
+
 ?>

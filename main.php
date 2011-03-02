@@ -85,7 +85,7 @@ checkTemplateUpdates();
 				<div id="breadcrumbs">
 					<div>
 						<?php ob_start("tpl_myyouarehere");tpl_youarehere();ob_end_flush();	?>
-						<?php echo tpl_languageFlag($pagelang); ?>
+						<?php if(tpl_getConf('languageflag')) echo tpl_languageFlag($pagelang); ?>
 					</div>
 				</div>
 				<!-- breadcrumbs end -->

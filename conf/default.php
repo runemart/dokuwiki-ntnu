@@ -37,4 +37,6 @@ $conf['expandmenus']								= 0;
 $conf['usetemplateupdates']					= 1;
 $conf['templateupdates'] 						= 0;
 
+$conf['languageflag']								= 0;
+
 ?>
