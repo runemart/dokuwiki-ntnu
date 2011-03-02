@@ -42,4 +42,6 @@ $lang['selectedtab_en_o_contact']		= 'Contact us';
 $lang['usetemplateupdates']					= 'Look for template updates?';
 $lang['templateupdates'] 						= 'Hide update messages with ID less than or equal to:';
 
+$lang['languageflag']									= 'Use in-page flag to symbolize translation?';
+
 ?>

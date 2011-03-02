@@ -37,5 +37,6 @@ $meta['expandmenus']								= array('onoff');
 $meta['usetemplateupdates']					= array('onoff');
 $meta['templateupdates'] 						= array('numeric');
 
+$meta['languageflag']								= array('onoff');
 
 ?>
