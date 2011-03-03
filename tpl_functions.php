@@ -353,7 +353,10 @@ function tpl_languageSelector($lang = 'no'){
 function tpl_languageFlag($pagelang = 'no'){
 	global $ID;
 	$ret = '<div class="flags">';
-	foreach(p_get_metadata($ID, 'translate') as $lang => $translate){
+	$t = p_get_metadata($ID, 'translate');
+	if(!$t || !is_array($t))
+		return '';
+	foreach($t as $lang => $translate){
 		$title = $translate['title'];
 		$ref = $translate['ref'];
 
