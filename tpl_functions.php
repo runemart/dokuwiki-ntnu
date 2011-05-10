@@ -62,11 +62,11 @@ function tpl_sidebar($side='menu') {
 	if(substr($local, 0, 1) == ':') $local = substr($local, 1);
 
 	if (file_exists(wikiFN($main))){
-		print p_sidebar_xhtml($main, $svID);
+		print p_sidebar_xhtml($main, $svID, $side);
 	}
 
 	if (file_exists(wikiFN($local))){
-		print p_sidebar_xhtml($local, $svID);
+		print p_sidebar_xhtml($local, $svID, $side);
 	}
 
 	$ID = $svID;
@@ -116,9 +116,10 @@ function tpl_hasSidebar(){
  * @author Michael Klier <chi@chimeric.de>
  * @modified-by		Rune M. Andersen <rune.andersen@ime.ntnu.no>
  */
-function p_sidebar_xhtml($Sb, $ID = NULL) {
+function p_sidebar_xhtml($Sb, $ID = NULL, $side = 'menu') {
 	$data = p_wiki_xhtml($Sb,'',false);
 	$data = explode("\n", $data);
+
 	if(tpl_getConf('markcurrentmenuitem'))
 		$data = tpl_markCurrent($data, $ID);
 	$control = array();
@@ -128,7 +129,7 @@ function p_sidebar_xhtml($Sb, $ID = NULL) {
 	foreach($control as $k => $c){
 		if(strpos($ID, $k) !== 0){
 			// removes sub items from menu, unless configured not to
-			if(!tpl_getConf('expandmenus')){
+			if($side == 'menu' && !tpl_getConf('expandmenus')){
 				list($start, $stop) = explode("-", $c);
 				for($i=$start ; $i<=$stop ; $i++){
 					$data[$i] = "";
