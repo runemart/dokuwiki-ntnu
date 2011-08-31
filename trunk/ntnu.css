@@ -55,8 +55,14 @@ body.en #bluebar #mainpagelink a {
 	padding-right: 2px;
 }
 
+#breadcrumbs {
+	position: relative;
+}
+
 .flags {
-	float: right;
+	position: absolute; 
+	right: .5em;
+	top: .6em;
 	overflow: auto;
 	padding: 0 !important;
 }
@@ -65,8 +71,9 @@ a.flag-no,
 a.flag-en {
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
-	height: 1em;
+	height: 1.5em;
 	padding-left: 24px;
+	display: block;
 }
 a.flag-no {background-image: url(icons/no.png)}
 a.flag-en {background-image: url(icons/gb.png)}
